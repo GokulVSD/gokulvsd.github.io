@@ -1,3 +1,55 @@
 ---
 ---
 @import "site-theme";
+
+@media (max-width: 766px){
+    .card-columns{
+        -webkit-column-count: auto;
+        column-count: auto;
+    }
+}
+
+@media (max-width: 575px){
+    .navbar{
+        display: block;
+    }
+}
+
+.navbar-nav{
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin-left: auto;
+}
+
+.navbar-nav .nav-link{
+    padding-right: 1rem!important;
+}
+
+.navbar-brand{
+    margin-bottom: 0;
+}
+
+.fa-1x{
+    font-size: 1.5em;
+    // margin-bottom: 100px;
+}
+
+.pb-3, .py-3{
+    padding-bottom: 1.5rem!important;
+}
+
+.social-buttons{
+    padding-bottom: 10px;
+}
+
+.timeline-body{
+    background-color: white;
+}
+
+.timeline-body.awards::after{
+    background-color: #28A745;
+}
+
+.timeline-body.awards .timeline-item::after{
+    border-color: #28A745;
+}

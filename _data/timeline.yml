@@ -1,4 +1,7 @@
-- title: Software Engineer, Société Générale, Bangalore
+- title: Software Engineer
+  organisation: Société Générale
+  website: https://globalsolution.societegenerale.com/en/
+  location: Bangalore
   from: 2020
   to: present
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -7,21 +10,19 @@
                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
-- title: Student, PES University Electronic City Campus, Bangalore
+- title: Student
+  organisation: PES University
+  website: https://pesitsouth.pes.edu/
+  location: Electronic City Campus, Bangalore
   from: 2016
   to: 2020
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  description: Undergraduate degree in Bachelors of Engineering, Computer & Information Science.
 
-- title: Lead Video Producer / Director, Biz Doors
+- title: Lead Video Producer / Director
+  organisation: Biz Doors
+  website: http://bizdoors.com/
+  location: Bangalore
   from: 2015
   to: 2016
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  description: Was in charge principle photography, creative direction and editing in the production of videos for corporate clients.
 
