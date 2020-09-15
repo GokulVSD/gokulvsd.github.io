@@ -30,8 +30,7 @@
 }
 
 .fa-1x{
-    font-size: 1.5em;
-    // margin-bottom: 100px;
+    font-size: 1.8em;
 }
 
 .pb-3, .py-3{
@@ -52,4 +51,8 @@
 
 .timeline-body.awards .timeline-item::after{
     border-color: #28A745;
+}
+
+.navbar-brand.active::after{
+    width: 100%;
 }

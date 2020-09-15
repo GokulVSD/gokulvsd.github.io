@@ -1,6 +1,12 @@
 <nav class="navbar navbar-expand-sm navbar-light">
 
-  <a class="navbar-brand" href="{{ site.baseurl }}/">
+    {%- if page.url == "/" -%}
+    {%- assign active_brand = "active" -%}
+    {%- else -%}
+    {%- assign active_brand = "" -%}
+    {%- endif -%}
+    
+  <a class="navbar-brand {{ active_brand }}" href="{{ site.baseurl }}/">
     <h5><b>{{ site.title }}</b></h5>
   </a>
 
