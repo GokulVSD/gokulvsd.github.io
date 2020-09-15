@@ -1,0 +1,62 @@
+### Site Settings ###
+title               : GokulVSD
+description         : Hi I am **Gokul Vasudeva** :wave:,<br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+baseurl             : ""
+repository          : GokulVSD/gokulvsd.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
+
+
+### Plugins ###
+plugins:
+  - jemoji
+
+
+### Navbar Settings ###
+nav_exclude:                                            # The following paths are excluded from navbar
+  - pages/tags.html
+  - pages/404.html
+  - pages/index.md
+
+
+### Author Info ###
+author:
+  name              : Gokul Vasudeva
+  email             : gokul.vasda@gmail.com
+  github            : GokulVSD
+  linkedin          : gokulvsd
+  twitter           : GokulVSD
+  facebook          : gokul.vsd
+  instagram         : gokulvsd
+  youtube           : GokulVSD1
+
+
+### Posts ###
+permalink: /blog/:title
+
+
+### Collections ###
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name
+
+
+
+### Defaults for collections ###
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: false                                   # Set to true to enable disqus comments
+
+### Exclude from processing ###
+exclude:
+  - README.md
+  - CONTRIBUTING.md
+  - LICENSE
+  - "*.log"
