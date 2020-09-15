@@ -1,12 +1,14 @@
 ---
-title: Learn React.js in 5 minutes
-tags: [React, JavaScript, Web Development]
+title: A Dive into React Hooks
+tags: [React, Web Dev, Exploration]
 style: border
 color: primary
-description: A quick introduction to the popular JavaScript library.
+description: React Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class.
 ---
 
-Source: [freecodecamp](https://medium.freecodecamp.org/learn-react-js-in-5-minutes-526472d292f4)
+Source: [React Docs](https://reactjs.org/docs/hooks-intro.html)
+
+## Below this is just placeholder
 
 This tutorial will give you a basic understanding of React.js by building a very simple application. I’ll leave out everything which I don’t think is core.
 
