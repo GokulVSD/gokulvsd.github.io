@@ -4,6 +4,15 @@
   {%- assign block_style = "" -%}
 {%- endif -%}
 
+
+{% unless include.functional %}
 <a class="m-1 btn btn-{{ include.style | default: 'outline-primary' }} btn-{{ include.size | default: 'md' }} {{ block_style }}" href="{{ include.link | default: '#' }}">
   {{ include.text | default: "Button" }}
 </a>
+{% endunless %}
+
+{% if include.functional %}
+<button class="m-1 btn btn-{{ include.style | default: 'outline-primary' }} btn-{{ include.size | default: 'md' }} {{ block_style }}" onclick="{{ include.link }}">
+  {{ include.text | default: "Button" }}
+</button>
+{%- endif -%}

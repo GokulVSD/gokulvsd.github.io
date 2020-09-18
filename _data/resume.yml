@@ -1,0 +1,39 @@
+name: Gokul Vasudeva
+tagline: Software Engineer
+email: gokul.vasda@gmail.com
+website_name: gokulvsd.github.io
+website_url: https://gokulvsd.github.io
+location: Bangalore, India
+
+# Set the order of sections here.
+sections:
+  - experience
+  - education
+
+data:
+  education:
+    title: Education
+    items:
+      - PES University (Electronic City Campus):
+          date: 2016 - 2020
+          subtitle: B.E. Information Science and Engineering
+          content: |
+              - CGPA: 8.25/10
+
+  experience:
+    title: Work Experience
+    items:
+      - Software Engineer:
+          date: November 2020 - Present
+          subtitle: | 
+              [Société Générale](https://globalsolution.societegenerale.com/en/)
+          content: |
+              - Yet to start
+              - Will update later
+      - Lead Video Producer / Director:
+          date: August 2015 - December 2015
+          subtitle: |
+              [Biz Doors](https://www.bizdoors.com/)
+          content: |
+              - Did stuff
+              - Some more stuff

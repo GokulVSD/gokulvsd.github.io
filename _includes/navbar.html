@@ -61,4 +61,11 @@
     <a class="nav-item nav-link " href="https://github.com/GokulVSD/gokulvsd.github.io"><i style="font-size: 0.9em;" class="fab fa-1x fa-github"></i></a>
 
   </div>
+  
+  {%- if include.show_page_print -%}
+  <div>
+    {% include elements/button.html link="window.print();" text="Download Resume" block=true functional=true %}
+  </div>
+  {%- endif -%}
+
 </nav>
