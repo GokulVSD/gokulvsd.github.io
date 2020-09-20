@@ -4,27 +4,152 @@
 
 <div class="cv">
     <style scoped>
-        @page { size: auto;  margin: 0mm; }
-        .cv p { margin: 0; }
-        .cv h1, h2 { font-weight: normal; }
-        .cv-basic-info-item { margin-right: 1em; white-space: nowrap; }
-        .cv-basic-info { clear: both; }
-        .cv-section-title { font-size: 1.75rem; margin: 1.5rem 0 1rem 0; }
-        .cv-item-title { font-weight: bold; }
-        .cv-item-subtitle { font-style: italic; }
-        .cv-item-content { padding-left: 40px; }
-        .cv-item-content > ul { padding: 0; margin: 0; }
-        .cv-item-content em { color: #636c72; margin-left: 0.5rem; }
-        .cv-item-content { font-size: 0.9em; }
-        .cv-date { float: right; }
-        .cv-date { font-size: 0.8em; }
+        @page {
+            size: auto;
+            margin: 0;
+            text-decoration: none;
+        }
+
+        @media print {
+
+            @page {
+                margin-top: 5mm;
+                margin-bottom: 5mm;
+            }
+
+            .cv {
+                margin-top: -8mm;
+            }
+
+            a,
+            a:visited {
+                text-decoration: none !important;
+            }
+
+            .cv-item {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            /* Use this class on an element you want to page break before */
+            .break-before {
+                page-break-before: always;
+                break-before: always;
+            }
+
+        }
+
+        li {
+            list-style-type: square;
+            font-size: 1.1em;
+        }
+
+        li strong {
+            font-size: 1.2em;
+        }
+
+        .cv {
+            /* Global font size adjustment for the entire resume, everything else is relative to this */
+            font-size: 1em;
+            padding-left: 15mm;
+            padding-right: 15mm;
+        }
+
+        .text-muted {
+            font-size: 1.5em;
+        }
+
+        .cv-name {
+            font-size: 2.5em;
+        }
+
+        .cv p {
+            margin: 0;
+        }
+
+        .cv h1,
+        h2 {
+            font-weight: normal;
+        }
+
+        .cv-basic-info-item {
+            margin-right: 1em;
+            white-space: nowrap;
+        }
+
+        .cv-basic-info {
+            margin-top: 2mm;
+            clear: both;
+            font-size: 1.2em;
+        }
+
+        .cv-section-title {
+            font-size: 2em;
+            margin: 1rem 0 0.5rem 0;
+        }
+
+        .cv-item {
+            margin-bottom: 3mm;
+        }
+
+        .cv-item:last-child,
+        li:last-child,
+        ul {
+            margin-bottom: -0.7mm;
+        }
+
+        .cv-item-title {
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .cv-item-subtitle {
+            font-style: italic;
+            font-size: 1.3em;
+        }
+
+        .cv-item-content {
+            padding-left: 40px;
+        }
+
+        .cv-item-content>ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        .cv-item-content em {
+            color: #636c72;
+            margin-left: 0.5rem;
+        }
+
+        .cv-date {
+            float: right;
+        }
+
+        .cv-date {
+            font-size: 0.9em;
+        }
 
         /* Adds lines between sections */
-            .cv-section-header { position: relative; }
-            .cv-section-title { display: inline-block; background: #fff !important; padding-right: 1.2rem; }
-            .cv-section-title:after { position: absolute; top: 3.4rem; z-index: -1; content: ''; display: block; width: 100%; border-top: 1px solid; }
+        .cv-section-header {
+            position: relative;
+        }
 
+        .cv-section-title {
+            display: inline-block;
+            background: #fff !important;
+            padding-right: 1.2rem;
+        }
 
+        .cv-section-title:after {
+            position: absolute;
+            top: 2.9rem;
+            z-index: -1;
+            content: '';
+            display: block;
+            width: 100%;
+            border-top: 1px solid;
+        }
     </style>
 
     <header>
@@ -33,32 +158,36 @@
     </header>
 
     <section class="cv-basic-info">
-        <span class="cv-basic-info-item"><i class="fa fa-envelope"></i>&nbsp;&nbsp;<a href="mailto:{{cv.email}}">{{cv.email}}</a></span>
-        <span class="cv-basic-info-item"><i class="fa fa-mouse-pointer"></i>&nbsp;&nbsp;<a href="{{cv.website_url}}">{{cv.website_name}}</a></span>
+        <span class="cv-basic-info-item"><i class="fa fa-envelope"></i>&nbsp;&nbsp;<a
+                href="mailto:{{cv.email}}">{{cv.email}}</a></span>
+        <span class="cv-basic-info-item"><i class="fa fa-globe"></i>&nbsp;&nbsp;<a
+                href="{{cv.website_url}}">{{cv.website_name}}</a></span>
         <span class="cv-basic-info-item"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;{{cv.location}}</span>
     </section>
 
     {% for sec_id in cv.sections %}
-        {% assign section = cv.data[sec_id] %}
-        <section class="cv-section" id="{{sec_id}}">
-            
-            <header class="cv-section-header"><h2 class="text-primary cv-section-title">{{section.title}}</h2></header>
+    {% assign section = cv.data[sec_id] %}
+    <section class="cv-section" id="{{sec_id}}">
 
-            {{ section.text | markdownify }}
+        <header class="cv-section-header">
+            <h2 class="text-primary cv-section-title">{{section.title}}</h2>
+        </header>
 
-            {% for item in section.items %}
-                {% for keyvalue in item %}
-                    <div class="cv-item">
-                        <span class="cv-item-title">{{keyvalue[0]}}</span>
-                        <span class="cv-date">{{keyvalue[1].date}}</span>
-                        <div class="cv-item-subtitle">{{keyvalue[1].subtitle | markdownify }}</div>
-                        <div class="cv-item-content">{{keyvalue[1].content | markdownify}}</div>
-                    </div>
+        {{ section.text | markdownify }}
 
-                {% endfor %}
-            {% endfor %}
+        {% for item in section.items %}
+        {% for keyvalue in item %}
+        <div class="cv-item">
+            <span class="cv-item-title">{{keyvalue[0]}}</span>
+            <span class="cv-date">{{keyvalue[1].date}}</span>
+            <div class="cv-item-subtitle">{{keyvalue[1].subtitle | markdownify }}</div>
+            <div class="cv-item-content">{{keyvalue[1].content | markdownify}}</div>
+        </div>
 
-        </section>
+        {% endfor %}
+        {% endfor %}
+
+    </section>
     {% endfor %}
 
 </div><!-- .cv -->

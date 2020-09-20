@@ -9,16 +9,26 @@ location: Bangalore, India
 sections:
   - experience
   - education
+  - projects
+  - skills
+  - achievements
 
 data:
   education:
     title: Education
     items:
-      - PES University (Electronic City Campus):
+      - PES University ECC:
           date: 2016 - 2020
-          subtitle: B.E. Information Science and Engineering
+          subtitle: Undergraduate, B.E. Computer Science and Engineering
           content: |
-              - CGPA: 8.25/10
+              - Specialisation in Information Science
+              - CGPA: 8.22/10
+      - Bethany Junior College:
+          date: 2014 - 2016
+          subtitle: Pre University ISC, PCM & Computer Science
+          content: |
+              - ISC 12th: 92%
+          
 
   experience:
     title: Work Experience
@@ -35,5 +45,31 @@ data:
           subtitle: |
               [Biz Doors](https://www.bizdoors.com/)
           content: |
-              - Did stuff
-              - Some more stuff
+              - Was in charge principle photography, creative direction and editing in the production of videos for corporate clients.
+  
+  projects:
+    title: Selected Projects & Contributions
+    text: |
+        - [**Open Source**](https://github.com/GokulVSD): Will fill later.
+        - [**Crypticket**](https://gokulvsd.github.io/Crypticket): A fully offline-capable cryptographic ticket and password generation and management platform, built as a responsive Progressive Web App (PWA) using React, utilising EdDSA elliptic curve cryptography.
+        - [**MonoDAC**](https://github.com/GokulVSD/MonoDAC): Monocular Depth Estimation via a Fully Convolutional Deep Neural Network, utilising Atrous Convolutions, with 3D Point Cloud Visualisation.
+        - [**Wuasta**](https://github.com/GokulVSD/Wuasta): A predictive Alarm Assistant which pragmatically wakes you up at just the right time, taking into account real-time traffic conditions.
+
+
+  skills:
+    title: Programming Skills
+    text: |
+        - **Languages**: C, C++, Java, JavaScript, Python
+        - **Web Dev**: React, Bootstrap, PHP, NodeJS, jQuery, Flask, Spark Java
+        - **Data Science**: Keras, TensorFlow, NumPy, OpenCV
+        - **Database**: MySQL
+
+  achievements:
+    title: Achievements & Awards
+    items:
+      - InGenius Hackathon:
+          date: 2017
+          subtitle: 1st Place, in the first year category
+      - HP Code Wars:
+          date: 2015
+          subtitle: Honorary Award
