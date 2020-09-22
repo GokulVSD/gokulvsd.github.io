@@ -50,16 +50,18 @@ data:
   projects:
     title: Selected Projects & Contributions
     text: |
-        - [**Open Source**](https://github.com/GokulVSD): Will fill later.
         - [**Crypticket**](https://gokulvsd.github.io/Crypticket): A fully offline-capable cryptographic ticket and password generation and management platform, built as a responsive Progressive Web App (PWA) using React, utilising EdDSA elliptic curve cryptography.
         - [**MonoDAC**](https://github.com/GokulVSD/MonoDAC): Monocular Depth Estimation via a Fully Convolutional Deep Neural Network, utilising Atrous Convolutions, with 3D Point Cloud Visualisation.
         - [**Wuasta**](https://github.com/GokulVSD/Wuasta): A predictive Alarm Assistant which pragmatically wakes you up at just the right time, taking into account real-time traffic conditions.
+        - [**Open Source**](https://github.com/GokulVSD): Will fill later.
+        - [**Technical Blog**](https://gokulvsd.github.io): Will fill later.
+
 
 
   skills:
     title: Programming Skills
     text: |
-        - **Languages**: C, C++, Java, JavaScript, Python
+        - **Languages**: C, C++, Go, Java, JavaScript, Python
         - **Web Dev**: React, Bootstrap, PHP, NodeJS, jQuery, Flask, Spark Java
         - **Data Science**: Keras, TensorFlow, NumPy, OpenCV
         - **Database**: MySQL
