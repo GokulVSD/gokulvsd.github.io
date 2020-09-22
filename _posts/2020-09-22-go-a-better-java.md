@@ -3,7 +3,7 @@ title: "Go: A Better Java"
 tags: [Go, Language, Dev Logs]
 style: border
 color: primary
-description: My experience with learning and using GoLang 
+description: My experience with learning and using GoLang, the general purpose programming language by Google.
 ---
 
 ## What led me here
