@@ -64,7 +64,7 @@ data:
         - **Languages**: C, C++, Go, Java, JavaScript, Python
         - **Web Dev**: React, Bootstrap, PHP, NodeJS, jQuery, Flask, Spark Java
         - **Data Science**: Keras, TensorFlow, NumPy, OpenCV
-        - **Database**: MySQL
+        - **Database**: SQL, GraphQL
 
   achievements:
     title: Achievements & Awards

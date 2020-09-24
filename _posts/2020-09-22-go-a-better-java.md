@@ -71,4 +71,6 @@ for _, name := range names {
 
 Go also has pointers, which are a welcome addition to remove ambiguity when wanting to call by reference. It also have inbuilt unit testing, which seems simple enough.
 
+[Here's all the stuff I made while learning from the Go docs](https://github.com/GokulVSD/ScratchPad/tree/master/Go)
+
 

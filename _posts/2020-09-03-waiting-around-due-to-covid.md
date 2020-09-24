@@ -9,11 +9,11 @@ description: I try to explain current situation I'm in, and the things that led 
 ## The backstory
 
 We had about 2 weeks of classes for my final semester, before colleges were shut down in mid march. Months passed, we did all our tests, assignments, and presentations online.
-Things were honestly going okay, except for the air uncertainty with respect to final examinations.
+Things were honestly going okay, except for the air of uncertainty with respect to final examinations.
 
 ## UGC
 
-I can begin to express my unrelenting hatred for this organisation. The University Grants Commission of India, they oversee university certification and credibility. You follow what they say,
+I cannot begin to express my unrelenting hatred for this organisation. The University Grants Commission of India, they oversee university certification and credibility. You follow what they say,
 or you get your univeristy license revoked.
 Now these guys, for the longest time, made it seem like they were going to be announcing the cancellation of final exams. My initial joining date for my job was supposed to be July 20th.
 July 4th, they announce that they are indeed cancelling final examinations for every semester, EXCEPT the final semester.
