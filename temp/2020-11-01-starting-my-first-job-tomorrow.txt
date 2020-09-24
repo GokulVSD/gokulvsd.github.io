@@ -14,7 +14,7 @@ This is a follow up to [Waiting Around Due To Covid](/blog/waiting-around-due-to
 
 * Had LASIK eye surgery to correct my vision, and recovered. Took about 2 weeks for me to comfortably sit infront of a computer for long periods of time.
 * Got my scooter serviced.
-* Developed a personal website (Hello!).
+* Developed a personal [website](https://gokulvsd.github.io) (Hello!).
 * Organised my digital life (set up showcases for previous projects, added documentation for projects which previously didn't have any, updated my social and professional pages to be more accurate, created a new [resume](/resume) that's rendered dynamically from YAML source files).
 * [Learnt to code in Go](/blog/go-a-better-java), the programming language.
 * Learnt to query in GraphQL.
