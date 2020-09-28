@@ -3,7 +3,7 @@ title: "Go: A Better Java"
 tags: [Go, Language, Dev Logs]
 style: border
 color: primary
-description: My experience with learning and using GoLang, the general purpose programming language by Google.
+description: Part 1 of my experience with learning and using GoLang, the general purpose programming language by Google.
 ---
 
 ## What led me here
@@ -61,7 +61,7 @@ func x(name string) map[string]int {
 
 ```
 
-For loops have a syntax similar to Python:
+For loops can use a syntax similar to Python:
 ``` go
 for _, name := range names {
     // replace _ with a variable if you want the index in a slice/array,
