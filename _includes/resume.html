@@ -10,36 +10,6 @@
             text-decoration: none;
         }
 
-        @media print {
-
-            @page {
-                margin-top: 8mm;
-                margin-bottom: 8mm;
-            }
-
-            .cv {
-                margin-top: -11mm;
-                margin-bottom: auto;
-            }
-
-            a,
-            a:visited {
-                text-decoration: none !important;
-            }
-
-            .cv-item {
-                page-break-inside: avoid;
-                break-inside: avoid;
-            }
-
-            /* Use this class on an element you want to page break before */
-            .break-before {
-                page-break-before: always;
-                break-before: always;
-            }
-
-        }
-
         li {
             list-style-type: square;
             font-size: 1.1em;
@@ -50,10 +20,11 @@
         }
 
         .cv {
-            /* Global font size adjustment for the entire resume, everything else is relative to this */
-            font-size: 0.8em;
+            /* Global font size adjustment for the entire resume ON HTML, everything else is relative to this */
+            font-size: 1em;
             padding-left: 15mm;
             padding-right: 15mm;
+            padding-top: 3mm;
             margin-bottom: 15mm;
         }
 
@@ -166,6 +137,39 @@
             display: block;
             width: 100%;
             border-top: 1px solid;
+        }
+
+        @media print {
+
+            @page {
+                margin-top: 8mm;
+                margin-bottom: 8mm;
+            }
+
+            .cv {
+                /* Global font size adjustment for the entire resume ON PRINT, everything else is relative to this */
+                font-size: 0.83em;
+                margin-top: -11mm;
+                margin-bottom: 0;
+                padding-top: 0;
+            }
+
+            a,
+            a:visited {
+                text-decoration: none !important;
+            }
+
+            .cv-item {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            /* Use this class on an element you want to page break before */
+            .break-before {
+                page-break-before: always;
+                break-before: always;
+            }
+
         }
     </style>
 

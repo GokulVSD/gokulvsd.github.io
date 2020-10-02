@@ -6,220 +6,164 @@ color: primary
 description: React Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class.
 ---
 
-Source: [React Docs](https://reactjs.org/docs/hooks-intro.html)
+## Before you cry
 
-## Below this is just placeholder
+React still supports classes, and will continue to support them for the forseeable future. Hooks are meant to streamline several parts of React development. The most major benefit
+I see is that hooks allow you to break down component logic and compartmentalise them, so that they may be reused. This was previously harder, as it wasn't easy to break down a 
+component when the component's logic was all over the place, across several life cycle methods. Having stateful logic all over the place also hindered testing and debugging.
 
-This tutorial will give you a basic understanding of React.js by building a very simple application. I’ll leave out everything which I don’t think is core.
+Along with this, classes are kind of cumbersome in JavaScript, as "this" works differently to most programming languages, and having to bind handlers manually becomes too verbose.
+The goal with hooks to eventually replace classes, by providing all the same functionality, in a simplified manner.
 
-## The setup
+## Hooks in a nutshell
 
-When getting started with React, you should use the simplest setup possible: an HTML file which imports the `React` and the `ReactDOM` libraries using script tags, like this:
-
-```html
-<html>
-<head>
-<script src="https://unpkg.com/react@15/dist/react.min.js"> </script><script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js">
-</script>
-<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-</head>
-<body>
-    <div id="root"></div>
-    <script type="text/babel">
-
-    /*
-    ADD REACT CODE HERE
-    */
-
-    </script>
-</body>
-</html>
-```
-
-We’ve also imported Babel, as React uses something called JSX to write markup. We’ll need to transform this JSX into plain JavaScript, so that the browser can understand it.
-
-There are more two things I want you to notice:
-
-1. The `<div>` with the id of `#root`. This is the entry point for our app. This is where our entire app will live.
-1. The `<script type="text/babel">` tag in the body. This is where we’ll write our React.js code.
-
-If you want to experiment with the code, check out this Scrimba playground.
-
-## Components
-
-Everything in React is a component, and these usually take the form of JavaScript classes. You create a component by extending upon the `React-Component` class. Let’s create a component called `Hello`.
+Hooks are a new addition in React 16.8. Hooks are functions that let you “hook into” React state and lifecycle features from function components. Hooks don’t work inside classes — they let you use React without classes. The following example renders a counter. When you click the button, it increments the value:
 
 ```javascript
-class Hello extends React.Component {
-    render() {
-        return <h1>Hello world!</h1>;
-    }
-}
-```
+import React, { useState } from 'react';
 
-You then define the methods for the component. In our example, we only have one method, and it’s called `render()`.
+function Example() {
+  const [count, setCount] = useState(0);
 
-Inside `render()` you’ll return a description of what you want React to draw on the page. In the case above, we simply want it to display an `h1` tag with the text _Hello world!_ inside it.
-
-To get our tiny application to render on the screen we also have to use `ReactDOM.render()`:
-
-```javascript
-ReactDOM.render(
-    <Hello />, 
-    document.getElementById("root")
-);
-```
-
-So this is where we connect our `Hello` component with the entry point for the app (`<div id="root"></div>`). It results in the following:
-
-![](https://cdn-images-1.medium.com/max/1000/1*T-bmSzg0KlijyB3dG1M-ow.png)
-
-The HTML’ish syntax we just looked at (`<h1>` and `<Hello/>`) is the JSX code I mentioned earlier. It’s not actually HTML, though what you write there does end up as HTML tags in the DOM.
-
-The next step is to get our app to handle data.
-
-## Handling data
-
-There are two types of data in React: props and state. The difference between the two is a bit tricky to understand in the beginning, so don’t worry if you find it a bit confusing. It’ll become easier once you start working with them.
-
-The key difference is that state is private and can be changed from within the component itself. Props are external, and not controlled by the component itself. It’s passed down from components higher up the hierarchy, who also control the data.
-
-{% include elements/highlight.html text="A component can change its internal state directly. It can not change its props directly." %}
-
-Let’s take a closer look at props first.
-
-## Props
-
-Our `Hello` component is very static, and it renders out the same message regardless. A big part of React is reusability, meaning the ability to write a component once, and then reuse it in different use cases — for example, to display different messages.
-
-To achieve this type of reusability, we’ll add props. This is how you pass props to a component:
-
-```javascript
-ReactDOM.render(
-    <Hello message="my friend" />,
-    document.getElementById("root")
-);
-```
-
-This prop is called `message` and has the value “my friend”. We can access this prop inside the Hello component by referencing `this.props.message`, like this:
-
-```javascript
-class Hello extends React.Component {
-    render() {
-        return <h1>Hello {this.props.message}!</h1>;
-    }
-}
-```
-
-As a result, this is rendered on the screen:
-
-![](https://cdn-images-1.medium.com/max/1000/1*M0-2Ct0K3SARZLSwIzgdJw.png)
-
-The reason we’re writing {this.props.message} with curly braces is because we need to tell the JSX that we want to add a JavaScript expression. This is called **escaping**.
-
-So now we have a reusable component which can render whatever message we want on the page. Woohoo!
-
-However, what if we want the component to be able to change its own data? Then we have to use state instead!
-
-## State
-
-The other way of storing data in React is in the component’s state. And unlike props — which can’t be changed directly by the component — the state can.
-
-So if you want the data in your app to change — for example based on user interactions — it must be stored in a component’s state somewhere in the app.
-
-### Initializing state
-
-To initialize the state, simply set `this.state` in the `constructor()` method of the class. Our state is an object which in our case only has one key called `message`.
-
-```javascript
-class Hello extends React.Component {
-
-    constructor(){
-        super();
-        this.state = {
-            message: "my friend (from state)!"
-        };
-    }
-
-    render() {
-        return <h1>Hello {this.state.message}!</h1>;
-    }
-}
-```
-
-Before we set the state, we have to call `super()` in the constructor. This is because `this` is uninitialized before `super()` has been called.
-
-Changing the state
-To modify the state, simply call **this.setState()**, passing in the new state object as the argument. We’ll do this inside a method which we’ll call `updateMessage`.
-
-```javascript
-class Hello extends React.Component {
-
-    constructor(){
-        super();
-        this.state = {
-            message: "my friend (from state)!"
-        };
-        this.updateMessage = this.updateMessage.bind(this);
-   }
-    updateMessage() {
-        this.setState({
-            message: "my friend (from changed state)!"
-        });
-    }
-    render() {
-        return <h1>Hello {this.state.message}!</h1>;
-    }
-}
-```
-
-> Note: To make this work, we also had to bind the `this` keyword to the `updateMessage` method. Otherwise we couldn’t have accessed `this` in the method.
-
-The next step is to create a button to click on, so that we can trigger the `updateMessage()` method.
-
-So let’s add a button to the `render()` method:
-
-```javascript
-render() {
   return (
-     <div>
-       <h1>Hello {this.state.message}!</h1>
-       <button onClick={this.updateMessage}>Click me!</button>
-     </div>
-  )
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
 }
 ```
+`useState` is a hook. We call it inside a function component to add some local state to it. React will preserve this state between re-renders. `useState` returns a pair: the current state value and a function that lets you update it. You can call this function from an event handler or somewhere else. It’s similar to `this.setState` in a class, except it doesn’t merge the old and new state together, allowing you to update
+individual state values instead of passing the entire state along with the value you want to update to the differencing algorithm to decide what to update.
 
-Here, we’re hooking an event listener onto the button, listening for the **onClick** event. When this is triggered, we call the **updateMessage** method.
-
-Here’s the entire component:
+You pass the initial value to `useState`, which will be assigned to `count` in the first render. Another difference with hooks is that the state no longer **has** to be an object. For posterity, here's the same
+React code in the old way:
 
 ```javascript
-class Hello extends React.Component {
+class Example extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0
+    };
+  }
 
-    constructor(){
-        super();
-        this.state = {
-            message: "my friend (from state)!"
-        };
-        this.updateMessage = this.updateMessage.bind(this);
-    }
-    updateMessage() {
-        this.setState({
-            message: "my friend (from changed state)!"
-        });
-    }
-    render() {
-         return (
-           <div>
-             <h1>Hello {this.state.message}!</h1>
-             <button onClick={this.updateMessage}>Click me!</button>
-           </div>
-        )
-    }
+  render() {
+    return (
+      <div>
+        <p>You clicked {this.state.count} times</p>
+        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+          Click me
+        </button>
+      </div>
+    );
+  }
 }
 ```
 
-The **updateMessage** method then calls **this.setState()** which changes the `this.state.message` value. And when we click the button, here’s how that will play out:
+Here are a multiple state variables being declared:
 
-Congrats! You now have a very basic understanding of the most important concepts in React.
+```javascript
+function ExampleWithManyStates() {
+  const [age, setAge] = useState(42);
+  const [fruit, setFruit] = useState('banana');
+  const [todos, setTodos] = useState([{ text: 'Learn Hooks' }]);
+  // ...
+}
+```
+
+## The useEffect Hook
+
+The Effect Hook, `useEffect`, adds the ability to perform things like data fetching, subscriptions, or manually changing the DOM from a function component. It serves the same purpose as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` in React classes, but unified into a single API.
+
+```javascript
+import React, { useState, useEffect } from 'react';
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  // Similar to componentDidMount and componentDidUpdate:
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.title = `You clicked ${count} times`;
+  });
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+```
+
+When you call `useEffect`, you’re telling React to run your “effect” function after flushing changes to the DOM. Effects are declared inside the component so they have access to its props and state. By default, React runs the effects after every render — including the first render. (just like `componentDidMount` AND `componentWillUpdate` together)
+
+```javascript
+function FriendStatusWithCounter(props) {
+
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    document.title = `You clicked ${count} times`;
+  });
+
+  const [isOnline, setIsOnline] = useState(null);
+
+  useEffect(() => {
+    ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);
+    return () => {
+      ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);
+    };
+  });
+
+  function handleStatusChange(status) {
+    setIsOnline(status.isOnline);
+  }
+  
+    if (isOnline === null) {
+    return 'Loading...';
+  }
+  return isOnline ? 'Online' : 'Offline';
+}
+```
+
+The preceeding example showcases a couple of things:
+1. Just like `useState` hook, you can have multiple `useEffect` hooks within a function component.
+2. Effects may also optionally specify how to “clean up” after them by returning a function. For example, this component uses an effect to subscribe to a friend’s online status, and cleans up by unsubscribing from it. React would unsubscribe from our ChatAPI when the component unmounts, as well as before re-running the effect due to a subsequent render. (just like `componentWillUnmount`)
+
+We can also tell the Effect hook to only run if a particular state variable has changed. This is similar to how before we would optimise using `componentWillMount`:
+
+```javascript
+useEffect(() => {
+  document.title = `You clicked ${count} times`;
+}, [count]); // Only re-run the effect if count changes
+```
+
+OR
+
+```javascript
+useEffect(() => {
+  ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);
+  return () => {
+    ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);
+  };
+}, [props.friend.id]); // Only re-run the effect if friend ID changes
+```
+
+## Things to remember
+
+Hooks are JavaScript functions, but they impose two additional rules:
+1. Only call Hooks at the top level. Don’t call Hooks inside loops, conditions, or nested functions.
+2. Only call Hooks from React function components. Don’t call Hooks from regular JavaScript functions. There is just one other valid place to call Hooks — your own custom Hooks, which you can learn
+about from the React docs.
+
+Wrapping up, there are several more less frequently used hooks available, such as `useContext` and `useReducer`, which you can read up about on the React docs.
+
+Overall, hooks drastically reduce the verbosity of React code, and reduces the number the things a React developer needs to remember to write clean code. A welcome change. 
+
+Source: [React Docs](https://reactjs.org/docs/hooks-intro.html)

@@ -38,6 +38,17 @@
   }
 }
 
+@media (max-width: 576px) {
+  .skill > p {
+    font-size: 4vw;
+  }
+
+  .skill-bar span {
+    font-size: 4vw;
+    top: -6.5vw;
+  }
+}
+
 .skill-bar.skill-bar-secondary {
   background: $secondary;
 }
