@@ -1,7 +1,23 @@
-- name: Adobe Photoshop
-  percentage: 95
+- name: Media Production
+  percentage: 90
   color: info
 
-- name: Sony Vegas
-  percentage: 90
+- name: Video & Photography
+  percentage: 95
   color: success
+
+- name: Video & Photo Editing
+  percentage: 85
+  color: warning
+
+- name: Competitive Gaming
+  percentage: 90
+  color: secondary
+
+- name: Cooking
+  percentage: 45
+  color: danger
+
+- name: Game Dev
+  percentage: 70
+  color: primary
