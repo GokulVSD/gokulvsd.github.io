@@ -1,5 +1,5 @@
 ---
-title: "Go: A Better Java"
+title: "Go: A Comprehensive Overview"
 tags: [Go, Language, Dev Logs]
 style: border
 color: primary
@@ -42,7 +42,7 @@ y := [2]int{1,2} // An array
 ```
 
 An init function takes the place of a constructor. There's no function overloading, but that's alright by me. It always just seemed like a feature for the sake of making a programmer
-feel like they're doing something clever, as opposed to being a meaninfully useful in more than a handful of cases.
+feel like they're doing something clever, as opposed to being meaninfully useful in more than a handful of cases.
 
 On a side note, the [GoLang FAQ](https://golang.org/doc/faq) page is the BOMB:
 
@@ -69,7 +69,10 @@ for _, name := range names {
 }
 ```
 
-Go also has pointers, which are a welcome addition to remove ambiguity when wanting to call by reference. It also has inbuilt unit testing, which seems simple enough.
+Go also has pointers, which are a welcome addition to remove ambiguity when wanting to call by reference. It also has inbuilt unit testing, which seems simple enough. Oh, did I mention Go is garbage collected?
+They claim to do it efficiently, but clearly it's not the most performant language. However, the convenience it brings is so welcome.
+
+[Continued in Part 2](/blog/go-part-2)
 
 [Here's all the stuff I made while learning from the Go docs](https://github.com/GokulVSD/ScratchPad/tree/master/Go)
 
