@@ -22,6 +22,8 @@ This is a follow up to [Waiting Around Due To Covid](/blog/waiting-around-due-to
 * Practiced on [dozens of LeetCode problems](https://github.com/GokulVSD/ScratchPad/tree/master/LeetCode). 
 * Spent some quality time with my family and friends by hangling out, playing video games and having group video calls.
 
+For all intents and purposes, I'm a full fledged adult now. I enered 2010 as I simultaneously entered my teens, and came out of 2020 feeling like the last decade went by so quickly. I get now why people always say that your adolescence is the only time in your life where you regularly are forced to meet new people and experience new things, without having to put in any extra effort. I feel like I'm going to miss that ease. 
+
 ## The job
 
 I was campus hired by Societe Generale during August of 2019. They're one of the three big banks in France, and I've been hired as a Software Engineer in Global Technology Services. 
