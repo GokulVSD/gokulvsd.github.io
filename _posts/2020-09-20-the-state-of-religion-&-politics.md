@@ -1,16 +1,16 @@
 ---
-title: The State of Religion & Poltics 
+title: The State of Religion & Politics 
 tags: [Philosophy]
 style: fill
 color: dark
 description: I try to articulate my thoughts on religion and politics, and why I shy away from being vocal about it.
 ---
 
-## Why am I making this post
+## Why I'm making this post
 
 At some point, every person needs to vent to feel sane. Consider this to be the only time I am willing to speak about religion or politics publicly. Frankly, I cannot risk saying something, even jokingly, and end up offending someone I really shouldn't have offended. That someone could even be a future employer down the line, possibly rejecting me for a slightly edgy joke I made on Twitter decades before. This fact is also the reason why I sometimes abstain from tweeting, commenting, posting, or even interacting on most social media. I went far enough as to delete any old post that could even remotely give an idea about my religious and political beliefs, or hamper my professional life in any way.
 
-I've been living this way for years at this point. It sometimes gets excruciating to hold back your thoughts, especially for someone who is very extroverted. I've learnt from my past that it is definitely way better than running your mouth and alienating people. It took a while for me to even bring myself to post this. I debated long and hard about whether this could come back to bite me. I even consulted others about it. I realised how stupid it was that this is the state we're in, where I have to be fearful of expressing my thoughts. That's when I decided to go ahead and post this, but I still had to go back and delete some of the things from my first draft, which is disheartening. It's easy to say we have freedom of speech and expression, but is it really true freedom and expression, when I have to question every thought I am about to express and hold back saying what I believe in, in light of whether expressing such a thought could affect me negatively in the future, be it professionally or socially?
+I've been living this way for years at this point. It sometimes gets excruciating to hold back your thoughts, especially for someone who is very extroverted. I've learnt from my past that it is definitely way better than running your mouth and alienating people. It took a while for me to even bring myself to post this. I debated long and hard about whether this could come back to bite me. I even consulted others about it. I realised how stupid it was that this is the state we're in, where I have to be fearful of expressing my thoughts. That's when I decided to go ahead and post this, but I still had to go back and delete some of the things from my first draft, which is disheartening. It's easy to say we have freedom of speech and expression, but is it really true freedom of speech and expression, when I have to question every thought I am about to express and hold back saying what I believe in, in light of whether expressing such a thought could affect me negatively in the future, be it professionally or socially?
 
 ## Religion
 
