@@ -1,9 +1,9 @@
 ---
-title: Starting My First Job Tomorrow, How I Spent The Last Few Months
+title: Starting My First Job Tomorrow
 tags: [Life Update]
 style: fill
 color: success
-description: Not too bad, if I say so myself. I'm surprised I was able to keep my self consistently productive.
+description: Not too bad, I was able to keep my self consistently productive for the last few months.
 ---
 
 ## The backstory
