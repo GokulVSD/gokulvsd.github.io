@@ -22,7 +22,7 @@ data:
           subtitle: Undergraduate, B.E. Computer Science and Engineering
           content: |
               - Specialisation in Information Science
-              - CGPA: 8.29/10
+              - CGPA: 8.3/10
       - Bethany Junior College:
           date: 2014 - 2016
           subtitle: Pre University ISC, PCM & Computer Science
@@ -38,8 +38,8 @@ data:
           subtitle: | 
               [Société Générale](https://globalsolution.societegenerale.com/en/)
           content: |
-              - Yet to start
-              - Will update later
+              - Software Engineer developing platforms and tools for Digital Workplace Services.
+              - Developed a RESTful universal Quiz platform in 3 weeks. 
       - Lead Video Producer / Director:
           date: August 2015 - December 2015
           subtitle: |
@@ -53,7 +53,7 @@ data:
         - [**Crypticket**](https://gokulvsd.github.io/Crypticket): A fully offline-capable cryptographic ticket and password generation and management platform, built as a responsive Progressive Web App (PWA) using React, utilising EdDSA elliptic curve cryptography.
         - [**MonoDAC**](https://github.com/GokulVSD/MonoDAC): Monocular Depth Estimation via a Fully Convolutional Deep Neural Network, utilising Atrous Convolutions, with 3D Point Cloud Visualisation.
         - [**Wuasta**](https://github.com/GokulVSD/Wuasta): A predictive Alarm Assistant which pragmatically wakes you up at just the right time, taking into account real-time traffic conditions.
-        - [**Open Source**](https://github.com/GokulVSD): Will fill later.
+        - [**Open Source**](https://github.com/GokulVSD): Implementations of novel algorithms, scripts, and solutions.
         - [**Technical Blog**](https://gokulvsd.github.io): Authored several technical & philosophical posts on programming, designs, concepts, and challenging problems I’ve faced.
 
 
@@ -62,9 +62,9 @@ data:
     title: Programming Skills
     text: |
         - **Languages**: C, C++, Go, Java, JavaScript, Python
-        - **Web Dev**: React, Bootstrap, PHP, NodeJS, jQuery, Flask, Spark Java
+        - **Web Dev**: React, NodeJS, Bootstrap, PHP, jQuery, Express, Flask, Spark Java
         - **Data Science**: Keras, TensorFlow, NumPy, OpenCV
-        - **Database**: SQL, GraphQL
+        - **Database**: SQL, NoSQL
 
   achievements:
     title: Achievements & Awards
