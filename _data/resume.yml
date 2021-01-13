@@ -39,7 +39,7 @@ data:
               [Société Générale](https://globalsolution.societegenerale.com/en/)
           content: |
               - Software Engineer developing platforms and tools for Digital Workplace Services.
-              - Developed a RESTful universal Quiz platform in under 3 weeks. 
+              - Developed a RESTful universal Quiz platform in under 3 weeks, and various other automation tasks.
       - Lead Video Producer / Director:
           date: August 2015 - December 2015
           subtitle: |
@@ -62,7 +62,7 @@ data:
     title: Programming Skills
     text: |
         - **Languages**: C, C++, Go, Java, JavaScript, Python
-        - **Web Dev**: React, NodeJS, Bootstrap, PHP, jQuery, Express, Flask, Spark Java
+        - **Web Dev**: React.JS, Node.JS, Bootstrap, PHP, jQuery, Express.JS, Flask, Apache Spark
         - **Data Science**: Keras, TensorFlow, NumPy, OpenCV
         - **Database**: MongoDB, MySQL
 
