@@ -6,7 +6,7 @@
 
 
 {% unless include.functional %}
-<a class="m-1 btn btn-{{ include.style | default: 'outline-primary' }} btn-{{ include.size | default: 'md' }} {{ block_style }}" href="{{ include.link | default: '#' }}">
+<a class="m-1 btn btn-{{ include.style | default: 'outline-primary' }} btn-{{ include.size | default: 'md' }} {{ block_style }}" href="{{ '/assets/resume.pdf' | absolute_url }}" download="Gokul Vasudeva Resume.pdf">
   {{ include.text | default: "Button" }}
 </a>
 {% endunless %}

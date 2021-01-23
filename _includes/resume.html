@@ -10,7 +10,8 @@
             divId: "adobe-dc-view"
         });
         adobeDCView.previewFile({
-            content: { location: { url: "{{ '/assets/resume.pdf' | absolute_url }}"} }
+            content: { location: { url: "{{ '/assets/resume.pdf' | absolute_url }}"} },
+            metaData: { fileName: "" }
         }, {
             embedMode: "IN_LINE",
             showDownloadPDF: false,
