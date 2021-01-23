@@ -10,12 +10,12 @@
             divId: "adobe-dc-view"
         });
         adobeDCView.previewFile({
-            content: { location: { url: "{{ '/assets/resume.pdf' | absolute_url }}"} },
-            metaData: { fileName: "Gokul Vasudeva Resume.pdf" }
+            content: { location: { url: "{{ '/assets/resume.pdf' | absolute_url }}"} }
         }, {
             embedMode: "IN_LINE",
             showDownloadPDF: false,
-            showPrintPDF: false
+            showPrintPDF: false,
+            showPageControls: false
         });
     });
 </script>
