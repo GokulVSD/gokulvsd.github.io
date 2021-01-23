@@ -1,5 +1,22 @@
-<!-- <iframe src="https://docs.google.com/viewer?url=http://infolab.stanford.edu/pub/papers/google.pdf&embedded=true" -->
-<!-- style="width:600px; height:500px;" frameborder="2"></iframe> -->
+<style>
+    .HUDView__HUDView___KLcRp .HUDView__HUDViewShow___27ydG,
+    .HUDView__HUDView___KLcRp,
+    .HUDView__HUDViewShow___27ydG,
+    .HUDView__hudContainer___3mx_O,
+    .HUDView__hudContainer___3mx_O .HUDView__immersiveShow___1pWVE,
+    .HUDView__immersiveShow___1pWVE {
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+
+    .spectrum-Toast,
+    .FilenameToast__ToastView___2d5kC .FilenameToast__hideToast___2ZF4u,
+    .FilenameToast__ToastView___2d5kC,
+    .FilenameToast__hideToast___2ZF4u {
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+</style>
 
 <div id="adobe-dc-view" style="width: 100%;"></div>
 <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -10,7 +27,7 @@
             divId: "adobe-dc-view"
         });
         adobeDCView.previewFile({
-            content: { location: { url: "{{ '/assets/resume.pdf' | absolute_url }}"} },
+            content: { location: { url: "{{ '/assets/resume.pdf' | absolute_url }}" } },
             metaData: { fileName: "Resume" }
         }, {
             embedMode: "IN_LINE",
@@ -20,4 +37,3 @@
         });
     });
 </script>
-
