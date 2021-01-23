@@ -36,7 +36,7 @@ data:
       - Software Engineer:
           date: November 2020 - Present
           subtitle: | 
-              [Société Générale](https://globalsolution.societegenerale.com/en/)
+              [Societe Generale](https://globalsolution.societegenerale.com/en/)
           content: |
               - Software Engineer developing platforms and tools for Digital Workplace Services.
               - Developed a RESTful universal Quiz platform in under 3 weeks, and various other automation tasks.
@@ -62,9 +62,9 @@ data:
     title: Programming Skills
     text: |
         - **Languages**: C, C++, Go, Java, JavaScript, Python
-        - **Web Dev**: React.JS, Node.JS, Bootstrap, PHP, jQuery, Express.JS, Flask, Apache Spark
+        - **Web Dev**: React.js, Node.js, Bootstrap, PHP, jQuery, Express.js, Flask, Spark Java
         - **Data Science**: Keras, TensorFlow, NumPy, OpenCV
-        - **Database**: MongoDB, MySQL
+        - **Database**: MongoDB, MySQL, SQLite3
 
   achievements:
     title: Achievements & Awards
