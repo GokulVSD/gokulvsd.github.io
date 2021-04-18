@@ -13,9 +13,9 @@
   from: 2020
   to: 2021
   description: Responsible for planning, designing, augmenting and building tools, platforms and service automations of internal processes.
-                Built a proactive data analytics platform for performance reports and scrubbing support tickets, orchestrating self-healing scripts and automations through Azure Cloud Services. 
-                Designed and developed a fully RESTful universal Quiz and Anonymous Survey Platform using the MERN stack, with robust anti-cheat measures and asynchronous session persistence.
-                Collaborated on augmenting the internal asset management platform with a task verification queue microservice.
+                <br>Built a proactive data analytics platform for performance reports and scrubbing support tickets, orchestrating self-healing scripts and automations through Azure Cloud Services. 
+                <br>Designed and developed a fully RESTful universal Quiz and Anonymous Survey Platform using the MERN stack, with robust anti-cheat measures and asynchronous session persistence.
+                <br>Collaborated on augmenting the internal asset management platform with a task verification queue microservice.
 
 - title: Student
   organisation: PES University
@@ -23,7 +23,8 @@
   location: Electronic City Campus, Bengaluru
   from: 2016
   to: 2020
-  description: Undergraduate degree in Bachelors of Engineering, Computer & Information Science. Relevant courses I took included Design and Analysis of Algorithms, Data Structures, File Structures, Computer Networks, OOPs, Design Patterns, Operating Systems,
+  description: Undergraduate degree in Bachelors of Engineering, Computer & Information Science.
+                <br>Relevant courses I took included Design and Analysis of Algorithms, Data Structures, File Structures, Computer Networks, OOPs, Design Patterns, Operating Systems,
                 DBMS, Data Mining, Big Data Analytics, Machine Learning, Artificial Intelligence, Information and Network Security and Web Development.
 
 - title: Lead Video Producer / Director
