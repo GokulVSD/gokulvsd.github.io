@@ -1,24 +1,43 @@
+- title: Member of Technical Staff II
+  organisation: ThoughtSpot
+  website: https://www.thoughtspot.com/
+  location: Bengaluru
+  from: 2021
+  to: Present
+  description: Upcoming Backend developer for SpotIQ, ThoughtSpot's AI driven analytics engine. 
+
 - title: Software Engineer
   organisation: Société Générale
   website: https://globalsolution.societegenerale.com/en/
-  location: Bangalore
+  location: Bengaluru
   from: 2020
-  to: present
-  description: Will be populating this after I've worked for a few months.
+  to: 2021
+  description: Responsible for planning, designing, augmenting and building tools, platforms and service automations of internal processes.
+                Built a proactive data analytics platform for performance reports and scrubbing support tickets, orchestrating self-healing scripts and automations through Azure Cloud Services. 
+                Designed and developed a fully RESTful universal Quiz and Anonymous Survey Platform using the MERN stack, with robust anti-cheat measures and asynchronous session persistence.
+                Collaborated on augmenting the internal asset management platform with a task verification queue microservice.
 
 - title: Student
   organisation: PES University
   website: https://pesitsouth.pes.edu/
-  location: Electronic City Campus, Bangalore
+  location: Electronic City Campus, Bengaluru
   from: 2016
   to: 2020
-  description: Undergraduate degree in Bachelors of Engineering, Computer & Information Science.
+  description: Undergraduate degree in Bachelors of Engineering, Computer & Information Science. Relevant courses I took included Design and Analysis of Algorithms, Data Structures, File Structures, Computer Networks, OOPs, Design Patterns, Operating Systems,
+                DBMS, Data Mining, Big Data Analytics, Machine Learning, Artificial Intelligence, Information and Network Security and Web Development.
 
 - title: Lead Video Producer / Director
   organisation: Biz Doors
   website: http://bizdoors.com/
-  location: Bangalore
+  location: Bengaluru
   from: 2015
   to: 2016
-  description: Was in charge principle photography, creative direction and editing in the production of videos for corporate clients.
+  description: A side-gig during my 12th grade. Was in charge principle photography, creative direction and editing in the production of videos for corporate clients.
+
+- title: PC Building
+  organisation: Self Employed
+  location: Bengaluru
+  from: 2013
+  to: 2015
+  description: A side-hussle while I was in High School. Researched, picked, and assembled parts along with troubleshooting and setup for friends, family and acquaintances.
 

@@ -1,0 +1,25 @@
+<hr>
+<h2>Technical Certifications</h2>
+<hr>
+
+<div class="card-columns m-3 mt-1">
+  {% for certificate in site.certificates %}
+    {%- if certificate.type[0] == "Technical" -%}
+    {% include certificates/certificate-card.html %}
+    {%- endif -%}
+  {% endfor %}
+</div>
+
+<hr>
+<h2>Awards & Honors</h2>
+<hr>
+
+<div class="card-columns m-3 mt-1">
+  {% for certificate in site.certificates %}
+    {%- if certificate.type[0] == "Award" -%}
+    {% include certificates/certificate-card.html %}
+    {%- endif -%}
+  {% endfor %}
+</div>
+
+

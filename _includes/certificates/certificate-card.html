@@ -1,0 +1,24 @@
+{%- comment -%} Determine Certificate URL {%- endcomment -%}
+{%- if certificate.external_url -%}
+  {%- assign certificate_url = certificate.external_url -%}
+{%- else -%}
+  {%- assign certificate_url = certificate.url | relative_url -%}
+{%- endif -%}
+
+<div class="wow animated fadeIn" data-wow-delay=".15s">
+  <a href="{{ certificate_url }}" class="project card text-dark">
+    <img class="card-img-top" src="{{ certificate.image }}" alt="Could not load" />
+    <div class="card-body">
+      <h5 class="card-title">
+        {{ certificate.title }}
+      </h5>
+        {%- for tag in certificate.type -%}
+        <span class="badge badge-pill text-primary border border-primary ml-1">{{ tag }}</span>
+        {%- endfor -%}
+      </p>
+    </div>
+    <div class="card-footer">
+      {{ certificate.date | date_to_long_string }}
+    </div>
+  </a>
+</div>

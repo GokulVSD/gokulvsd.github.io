@@ -1,0 +1,27 @@
+---
+layout: page
+---
+
+<img src="{{ page.image }}" alt="Could not load" />
+
+<hr>
+
+<h2><b>{{ page.title }}</b></h2>
+
+<p class="post-metadata text-muted">
+  Completed on: {{ page.date | date_to_long_string }} 
+
+  <br>
+
+</p>
+
+{%- if page.type != empty -%}
+{% for tag in page.type %}
+<a class="text-decoration-none no-underline">
+  <span class="tag badge badge-pill text-primary border border-primary">{{ tag }}</span>
+</a>
+{% endfor %}
+{%- endif -%}
+
+
+

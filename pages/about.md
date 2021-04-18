@@ -20,8 +20,8 @@ for friends and family. Sticking with the above themes, naturally, I'm an avid g
 
 Throwing an oddball, I'm strangely interested in civil engineering and infrastructure, as it gives me pleasure to witness humanity advance. I also enjoy tea way more than coffee.
 
-People keep asking me why I always introduce myself as someone who enjoys long walks on the beach. That's just me being sarcastic, as I'm a native of Bangalore, and have never lived
-near a beach in my life, let alone go for a long walk on one. I would, however, like to.
+People keep asking me why I always introduce myself as someone who enjoys long walks on the beach. That's just me being sarcastic, as I'm a native of Bengaluru, and have never lived
+near a beach in my life, let alone gone for a long walk on one. I would, however, like to.
 
 <div class="row">
 {% include about/skills.html title="Professional Skills" source=site.data.professional-skills %}

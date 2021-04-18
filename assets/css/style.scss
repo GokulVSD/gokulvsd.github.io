@@ -2,17 +2,29 @@
 ---
 @import "site-theme";
 
+@media (max-width: 990px){
+    .card-columns{
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+
 @media (max-width: 766px){
     .card-columns{
         -webkit-column-count: auto;
         column-count: auto;
     }
-}
-
-@media (max-width: 575px){
     .navbar{
         display: block;
     }
+    .navbar-nav{
+        font-size: 0.9rem;
+    }
+}
+
+
+.container{
+    width: fit-content;
 }
 
 .navbar-nav{
