@@ -33,9 +33,6 @@ author:
 ### Posts ###
 permalink: /blog/:title
 
-### Certificates ###
-permalink: /certificates/:title
-
 
 ### Collections ###
 collections:
