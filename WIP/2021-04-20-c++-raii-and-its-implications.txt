@@ -1,9 +1,9 @@
 ---
-title: "Go: Part 4"
-tags: [Go, Language]
+title: "C++: RAII and its implications"
+tags: [C++, Language]
 style: border
 color: primary
-description: Part 4 goes in depth into Methods and Interfaces, along with some of their applications.
+description: I dive into the key benefits that RAII brings to exception handling (stack unwinding), as well as move semantics for STL containers and wrapped pointers. 
 ---
 
 ## Methods

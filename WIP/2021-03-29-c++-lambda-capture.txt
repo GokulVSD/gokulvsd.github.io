@@ -1,9 +1,9 @@
 ---
-title: "Go: Part 4"
-tags: [Go, Language]
+title: "C++: Lambda Capture"
+tags: [C++, Language]
 style: border
 color: primary
-description: Part 4 goes in depth into Methods and Interfaces, along with some of their applications.
+description: I give an overview of the different ways of capturing details from scope when using C++ lambdas.
 ---
 
 ## Methods

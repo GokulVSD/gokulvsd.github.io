@@ -1,9 +1,9 @@
 ---
-title: "Go: Part 4"
-tags: [Go, Language]
+title: "Kafka: An Overview"
+tags: [Kafka, Exploration]
 style: border
 color: primary
-description: Part 4 goes in depth into Methods and Interfaces, along with some of their applications.
+description: I briefly discuss the usage of Kafka, its characteristics, and dive into some implementation details.
 ---
 
 ## Methods

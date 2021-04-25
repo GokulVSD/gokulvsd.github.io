@@ -1,6 +1,6 @@
 ---
 title: "Non-persistant Express session storage"
-tags: [NodeJS, Express, Session Handling, Backend]
+tags: [NodeJS, Express, Session Handling, Backend, Dev Logs]
 style: border
 color: primary
 description: What I've learnt after dealing with Node and session handling.

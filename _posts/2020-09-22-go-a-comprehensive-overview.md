@@ -1,6 +1,6 @@
 ---
 title: "Go: A Comprehensive Overview"
-tags: [Go, Language, Dev Logs]
+tags: [Go, Language]
 style: border
 color: primary
 description: Part 1 of my experience with learning and using GoLang, the general purpose programming language by Google.

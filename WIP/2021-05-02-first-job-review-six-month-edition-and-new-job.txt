@@ -1,0 +1,123 @@
+---
+title: "First Job Review: Six Month Edition (And New Job!)"
+tags: [Life Update]
+style: fill
+color: success
+description: My short-lived time at Societe Generale has come to an end, I give my feedback, and share my excitement for my next job.
+---
+
+## The backstory
+
+I was campus placed in Societe Generale in August of 2019, a couple weeks after the placement season had started. SG was my third interview, after
+CureFit (where I bombed the interview because I was unaware of how coding interviews worked, and over-analysed the problems), and Cisco (which was a tough, but
+interesting and rewarding set of interview rounds. I did pretty well, and it prepared me well for future interviews. I got rejected in the HR round because it 
+came to light that since I was from the south campus of PES, I was only allowed to do an internship for 2 months; Cisco required 6).
+
+The first sign that I should have picked up on, which was a dead giveaway that the role SG was hiring me for wasn't going to be at my caliber, was how incredibly
+easy I found SG's interview process to be, compared to the 2 previous companies. The screening coding round consisted of a couple of straight forward "follow the
+instructions" type coding questions. The in-person interviews started off with a group discussion, followed by a SINGLE interview by the manager of the team I would end up joining. He started off by saying "if you were able to get past the screening coding round, you are more than good enough for this role. Instead of testing you
+technically, I will be evaluating you on your personality, resume, and conviction." As soon as the interview was over, I had a bit to think over the sequence of
+events, and I had a feeling that this company, and this role isn't really as technically inclined as I would want it to be.
+
+PES has a (stupid) placement policy, where you can have a maximum of one offer from a tier 1 company, which is a tier system based on pay range. SG fell in the
+highest pay range, and hence was classified as a tier 1 company. Once I got called into the HR room and got offered the job, rejecting it was pointless. 
+Once offered, I am inelegible to sit for for any other company that came to PES for placements.
+
+At the time, I got pretty bad advice, telling me that I got a job that many people would dream of, and that I should take it easy for the rest of my final
+year. I listened to that advice, instead of applying off campus, because there were a lot of rumours saying that getting a job off campus is way harder, and
+they don't pay as well. In hindsight, its clear that the rumour is perpetuated by people to reduce the off campus competition. Nonetheless, I got complacent,
+and relaxed for the remaining year I had in PES. I got my job description in February of 2020, and that is when I realised the gravity of the mistake I had
+committed. It was a role which would involve a lot of automation work, and I would be joining a non-technical team as a developer. I don't need to tell you
+how bad of a career starting point it is to join such a team as a fresher. You learn nothing, when you're supposed to be learning the most. The double
+whammy was the untimely beginning of the Covid19 pandemic, the very next month, which basically crushed any hope of me being able to get another job.
+Companies were laying people off in droves, and I wasn't even sure my SG offer still stood. So I decided to play it safe, once I got the confirmation from
+SG that my offer stood, I decided to go ahead with it.
+
+## My six months at Societe Generale
+
+I could say whole lot, I can spit out paragraph after paragraph of all the problems I faced at SG, but I don't want to waste your time, neither is me ranting
+going to accomplish anything, because the problems SG has are far too deep rooted to be fixed in the next half decade. I'll try to keep it brief. I'm not
+trying to give SG a bad rep, its possible that my bad experience is isolated to the part of the organisation I was in. I can only speak of my own experience.
+If anyone higher up from SG reads this, take this as the most sincere form of criticism to improve on, because no one within your organisation will be giving 
+feedback this harsh and honest.
+
+The work was not challenging me in the slightest. All I did was use the same things I've known for years. Basic fullstack work which one would expect you to do as
+a mini project during a bachelors course. I wanted to solve hard problems, that's what I've been training to do my entire adult life. That's my calling.
+
+I had a very poor joining experience, no clarity on what I should be doing, half the stuff on the internal company portal not working, no formal training on
+how the company functioned, and no info on the procedures I should be following. As a fresher, I was basically plopped into a team with a few other developers,
+who were relatively inexperienced. I get that they were trying to set up a team of developers, but without a strong foundation of senior devs or lead engineers,
+you ain't going to be able to build a cohesive and efficient team. I digress; I faced a huge number of smaller problems, that really added up over time;
+connectivity issues, mailing issues, communications platform issues, VPN issues, attendance tracking issues, HR issues and payroll issues to name a few. 
+I was initially put into the wrong team on their systems, and that took a long time to rectify, even after it was, it wasn't done correctly, so in lots of places 
+on their infrastructure, there were issues that cropped up as a result of their mistake, which I had to deal with. This was not the type of experience I was 
+expecting when joining as a fresh graduate for his first job. The first few weeks were a big headache and stress creator for me. On top of that, for each of these 
+smaller problems I faced, I had to contact a plethora of different people, most of whom either didn't reply or took too long.
+
+For one, their internal infrastructure and COTS choices were very clunky and outdated. Clearly, they weren't willing to invest and adopt in better off the 
+shelf tech, instead making knock off poorly made internal alternatives for everything, in the name of either redundant, unecessary and overly
+restrictive security policies, or because they wanted to save a buck. Kinda foolish, because it would end up costing SG way more in the long
+run to develop, host, and maintain some of their in house products, instead of just buying software off the shelf. Some of their internal platforms were bug ridden,
+clunky and unreliable.
+
+I wanna touch on their security policies for a bit. I get that they're a big bank, and they have regulatory pressure, but some of the security measures they
+took, coming from someone who is pretty interested in information and network security, and knows a thing or two, is SO redundant and unecessary. All it
+ends up doing is pissing employees off, and stifle productivity. In any secure system, its common sense to set up redundant layers, no one is denying that.
+The stupidity of their policies stems from how they have the layers set up. The layers are lopsided. Some layers had ridiclous levels of security,
+while others had a single point of failure. I'm 100% sure most of these policies are from people who don't really understand which security mechanisms are
+more secure than others. They would put in annoying security measures, that anyone with half a brain can figure out an alternative way to overcome. The
+reason why they can be overcome, is because clearly, they aren't that important to protect, especially for an employee already connected to their
+internal network. You can do a lot of damage just by getting access to their internal network, so putting in place ridiculous security measures past
+that point, is just asanine. If the restriction can be overcome, why are there security measures for such things in the first place?
+All it does is waste my time in adding unecessary steps to EVERYTHING I do.
+
+Some of these were unbelievably restrictive for no reason. It took me an entire week to get Python installed on my workstation, and another week to get
+any package installed. Their network firewall blocked several TRUSTED package repositories from being accessed, which can be SO easily overcome.
+All the firewall did was make me do several extra steps for every package I need. That's just the tip of the iceberg. I can go on and on.
+
+There was very little collaboration between teams, and lots of cross-talk. In my team, there was a lot of ad-hoc development, with no conventions,
+making reuse and code collaboration very frustrating. I also made the mistake of telling my team about my video editing hobby, which led to several
+weeks of them pushing video editing work that isn't part of my job description onto me, while keeping my regular workload, essentially making me do 
+video editing for the company when off work hours.
+
+The fixes for most of my problems with SG would involve changing how the entire organisation functioned, or would cost money, which wasn't going to
+happen anytime soon. My team was content with doing patch work, and starting unecessary new projects for the sake of making business cases for the
+existence of the team within the organisation; which begs the question of why such a team would require developers. Ideally, the dev work we were doing,
+building multiple disparate smaller platforms, should have been one large scale cohesive platform, with its own dev team and maintainers.
+
+My manager would tell me I can't take leaves because I'm on probation, even though I was explicitly told during onboarding that I am allowed to take leaves,
+and acted like he was doing me a favour by allowing me to take leaves that I'm entitled to. I didn't even end up using 90% of my leaves before I left.
+
+I made the mistake of joining an old bank, they are way too rigid in their ways, and spent way too much time on pointless things, being picky 
+about the dumbest things. I could tell that quite a few people within the company didn't do their due diligence, which led to half the time being
+wasted correcting mistakes which wouldn't have happened if planning was done correctly. I genuinely feel that this arises from the lack of overall
+passion within the organisation. I, as a fresher, in such a corporate environment, don't really have a say. Nothing I say or suggest would be taken seriously,
+and no one is going to listen to that fresher from that obscure team telling you to completely change the way the organisation works.
+So I decided to do the one thing I can do, leave.
+
+All I can say is that I learnt my lesson the hard way.
+Right out of college, I should have been putting WAY more emphasis on the company environment, internal processes, and the job description, 
+instead of the money and company name. I sincerely wish that SG is able to improve, and I'm sure they will over a long period of time. But I cannot wait 
+that long. This experience has left a sour taste in my mouth, and I will definitely not be working in such a corporate enviroment any time soon. 
+
+I realised that I didn't like the enviroment, and I couldn't be productive in such a restrictive organisation pretty early on, within the first two months
+in fact. I started preparing for a job change from that point on. I interviewed with three companies, and got two offers.
+
+## My upcoming job at [ThoughtSpot](https://www.thoughtspot.com/)
+
+After I got my first offer, my buddy Dheeraj told me to try for ThoughtSpot, where he'd been working for the past year. He had, of course, over the last
+year, told me a lot about the company, so I already knew that their enviroment is pretty great, and the work involves deep tech. They produce advanced
+business-intelligence analytics search software.
+
+I was pretty happy with the first offer I got, as it was a substantial pay bump for me, and the type of work would be a lot better in terms of my career
+growth. On top of that, I wasn't really that confident in my abilities to get past the interview process for ThoughtSpot, because I had heard it wasn't
+going to be easy. He did manage to convince me try over some beers, and so I did. He referred me, and over the course of the next week, I went through
+a screening coding round consisting of 3 tough coding questions, and 2 rounds of coding interviews. They skipped the culture fit round, I assume
+because they expect me to know and gel with their culture since I am good friends with an existing employee. I aced every coding question they threw
+at me, some, even to my own surpise. I was confident I had cleared every round after I was done with one, but I was expecting there to be more rounds.
+They however, decided to hire me after the 2nd round. I'm super pumped, because I know I'm going to be the least experienced and least skilled person
+in any room once I join, and all that means is that I get to learn a lot. This is going to be very good for my career in the long term, not mention 
+the substantial pay bump I got OVER my previous offer.
+
+I will be joining in as a Member of Technical Staff II (backend developer for SpotIQ, ThoughtSpot's AI driven analytics engine).
+
