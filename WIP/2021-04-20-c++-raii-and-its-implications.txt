@@ -1,384 +1,137 @@
 ---
-title: "C++: RAII and its implications"
+title: "C++: RAII and its implications Part 1"
 tags: [C++, Language]
 style: border
 color: primary
-description: I dive into the key benefits that RAII brings to exception handling (stack unwinding), as well as move semantics for STL containers and wrapped pointers. 
+description: I dive into the RAII paradigm while discussing solutions to issues with dynamic memory allocation. 
 ---
 
-## Methods
+## Inspiration
 
-Go does not have classes. However, you can define methods on types.
-A method is a function with a special `receiver argument`. The receiver appears in its own argument list between the func keyword and the method name.
-In the following example, the Hyp method has a receiver of type `Vertex` named v. This v can be considered equivalent to using `this` in other OO languages.
+The inspiration to write this post was a course on Pluralsight for modern C++ 17, where I heard a comment from the instructor discouraging the use of `new`.
+This led me down a rabit hole, allowing me to discover cool features of modern C++ I had no idea about, in my pursuit of writing readable and efficient code.
 
-```go
-type Vertex struct {
-	X, Y float64
-}
+By discouraging the use of `new`, the instructor was indirectly encouraging the use of one memory allocation paradigm over another.
+In other words, use **automatic memory allocation** (on the stack) instead of **dynamic memory allocation** (in the heap). There are many reasons for this,
+some are obvious, while others, not so much. I'll first give some context before diving in.
 
-func (v Vertex) HypMethod() float64 {
-	return math.Sqrt(v.X*v.X + v.Y*v.Y)
-}
+## The Stack
 
-// Function version of the above method
-func HypFunction(v Vertex) float64 {
-	return math.Sqrt(v.X*v.X + v.Y*v.Y)
-}
+The stack allocates memory in a layered fashion. The consequence of this is that you know exactly what and how much is allocated for each scope.
+This is the memory allocation technique for local variables in many programming languages. It is extremely fast because it requires minimal bookkeeping. The
+address range for deallocation when leaving a scope is implicit, and so is the starting address to allocate when entering a scope.
 
-func methodTest1() {
-	h := Vertex{3, 4}
-	fmt.Println(h.HypMethod())  // prints 5
+In C++, this is called **automatic storage** because the storage is claimed automatically at the end of scope.
+Memory for all variables in the scope (delimited by `{}`) is automatically collected.
+This is also the moment where destructors are invoked on every object in the scope to clean up resources.
 
-	// equivalently, using a function
-	fmt.Println(HypFunction(h)) // prints 5
-}
-```
+## The Heap
+The reason you would allocate memory in the heap instead of on the stack is for flexibility.
+Bookkeeping is more complex and allocation is slower. Because there is no implicit release point, you must release the memory manually, 
+using `delete` (`free` in C). However, the absence of an implicit release point is the key to the heap's flexibility.
 
-You can declare a method on non-struct types too. In the following example we see a numeric type MyFloat with an Abs method. You can only declare a method with a receiver whose type is defined in the same package as the method. You **cannot** declare a method with a receiver whose type is defined in another package (which includes the built-in types such as `int`).
+Even though using the heap is slower and opens the door to possible memory leaks or memory fragmentation, there are perfectly good use cases for dynamic allocation, 
+as it's less limited.
 
-```go
-type MyFloat float64
+### Two key reasons to use dynamic allocation:
 
-func (f MyFloat) Abs() float64 {
-	if f < 0 {
-		return float64(-f)
-	}
-	return float64(f)
-}
+* You don't know how much memory you need at compile time. For instance, when reading a text file into a string, you usually don't know what size the file has, 
+so you can't decide how much memory to allocate until you run the program.
 
-func methodTest2() {
-	f := MyFloat(-math.Sqrt2) // -math.Sqrt2 = -1.4142135623730951
-	fmt.Println(f.Abs())      // prints 1.4142135623730951
-}
-```
+* You want to allocate memory which will persist after leaving the current scope. For instance, you may want to write a function `string readfile(string filename)` 
+that returns the contents of a file. In this case, even if the stack could hold the entire file contents, you could not return from a 
+function and keep the allocated memory block.
 
-You can declare methods with pointer receivers. This means the receiver type has the literal syntax `*T` for some type `T`. (Also, `T` cannot itself be a pointer such as `*int`.)
-In the following example, the Scale method here is defined on `*Vertex`. Methods with pointer receivers can modify the value to which the receiver points (as Scale method does here). Since methods often need to modify their receiver, pointer receivers are more common than value receivers.
-
-```go
-func (v *Vertex) ScaleMethod(f float64) {
-	v.X = v.X * f
-	v.Y = v.Y * f
-}
-
-// Function version of the above method
-func ScaleFunction(v *Vertex, f float64) {
-	v.X = v.X * f
-	v.Y = v.Y * f
-}
-
-func methodTest3() {
-	v := Vertex{3, 4}
-	v.ScaleMethod(10) // v gets updated
-
-	// equivalently, using a function
-	ScaleFunction(&v, 10)
+Compared to other languages, dynamic allocation by the **you** in C++ is often unnecessary. C++ has a neat construct called a destructor, which is a mechanism that 
+allows you to manage resources by aligning the lifetime of the resource with the lifetime of a variable. 
+This technique is called RAII ([Resource Acquisition Is Initialization](https://en.wikipedia.org/wiki/Resource_acquisition_is_initialization)) and is a huge
+upside in using C++. In other words, we are removing the necessity to use the first reason to use dynamic allocation above, by making it not the code writer's 
+problem. Objects "wrap" resources within them. std::string is a perfect example. Observe the following code:
+```c++
+int main(int argc, char* argv[]) {
+    std::string s(argv[0]);
 }
 ```
+Wait a minute, we're actually allocating a variable amount of memory here, as the size of s is an input to the program. How? well, 
+the std::string object allocates memory using the heap in its constructor and releases it in its destructor. The destructor is automatically invoked
+when we are about to leave the scope where the variable `s` exists.
+In this case, you did not need to manually manage any resources for `s` and still got the benefits of dynamic memory allocation.
 
-### Nuances when using **pointers** with methods and functions:
+In other words, doing the following is bad practice:
 
-```go
-var v Vertex
-ScaleFunction(v, 5)  // Compile error!
-ScaleFunction(&v, 5) // OK
-
-var v Vertex
-v.ScaleMethod(5)  // OK
-p := &v
-p.ScaleMethod(10) // OK
-```
-
-For the statement `v.ScaleMethod(5)`, even though `v` is a value and not a pointer, it is passed as a pointer since the `ScaleMethod` has a pointer receiver.
-That is, as a convenience, Go interprets the statement `v.Scale(5)` as `(&v).Scale(5)`
-
-### Nuances when using **values** with methods and functions:
-
-```go
-var v Vertex
-fmt.Println(HypFunction(v))  // OK
-fmt.Println(HypFunction(&v)) // Compile error!
-
-var v Vertex
-fmt.Println(v.HypMethod()) // OK
-p := &v
-fmt.Println(p.HypMethod()) // OK
-```
-
-Methods with value receivers can also be called on pointers. That is, the method call `p.HypMethod()` is interpreted by Go as `(*p).HypMethod()`. Since the method uses a value receiver, it still cannot modify the values pointed by `p`. It is essentially call by value, even though you are calling it on a pointer. There are two reasons to use a pointer receiver:
-* The first is so that the method can modify the value that its receiver points to.
-* The second is to avoid copying the value on each method call. This can be more efficient if the receiver is a large struct, for example.
-
-As good practice, all methods on a given type should have either value or pointer receivers, but not a mixture of both.
-
-## Interfaces
-
-An interface type is defined as a set of **method** signatures. A variable of interface type can hold any value that has implementations for those methods.
-
-```go
-type Abser interface {
-	Abs() float64
-}
-
-type MyFloat float64
-
-func (f MyFloat) Abs() float64 {
-	if f < 0 {
-		return float64(-f)
-	}
-	return float64(f)
-}
-
-type Vertex struct {
-	X, Y float64
-}
-
-func (v *Vertex) Abs() float64 {
-	return math.Sqrt(v.X*v.X + v.Y*v.Y)
-}
-
-func interfaceTest1() {
-	var a Abser	
-	f := MyFloat(-math.Sqrt2)
-	v := Vertex{3, 4}
-
-	a = f
-	a = &v
-
-	a = v // Error
-
-	fmt.Println(a.Abs())
+```c++
+int main(int argc, char* argv[]) {
+    std::string *s = new std::string(argv[0]);
+    delete s;
 }
 ```
-In the above example, there is an an Abs method defined with `MyFloat` receiver argument, hence MyFloat type implements Abser, so assigning `a = f` succeeds. Similarly, there is an Abs method defined with `*Vertex` receiver argument, hence `*Vertex` type implements Abser, so assigning `a = &v` succeeds. However, there is no method implementation for Abs defined with `Vertex` receiver argument (even though there is one for its pointer), so assigning `a = v` throws an error.
+While it behaves identically to the previous snippet, there is more typing and you are unecessarily introducing the risk of forgetting to deallocate memory. 
+It does this with no apparent benefit. Objects created by `new` must be eventually deleted else they leak. The destructor won't be called, memory won't be freed.
 
+To sum up the benefits of the approach (automatic allocation with RAII):
 
-Under the hood, interface values can be thought of as a tuple of a value and a concrete type: `(value, type)`. An interface value holds a `value` of a specific underlying concrete `type`. Calling a method on an interface value executes the method of the same name on its underlying `type`.
+* Faster to type
+* Faster to run because you no longer need a garbage collector (which C++ does not have)
+* Less prone to memory/resource leaks.
+* And a nuanced reason, consider the following code:
+```c++
+class Box {
+public:
+    Box();		// Constructor
+    ~Box();		// Destructor
+    std::string* mItem;
+};
 
-```go
-a = f
-fmt.Printf("(%v, %T)\n", a, a) // prints (-1.4142135623730951, main.MyFloat)
-```
-
-### Interface values with nil underlying values
-
-If the concrete `value` inside the interface itself is nil, the method will be called with a nil receiver. In some languages this would trigger a null pointer exception, but in Go it is common to write methods that gracefully handle being called with a nil receiver. Note that an interface value that holds a nil concrete value is itself **non-nil**.
-
-```go
-type I interface {
-	M()
+Box::Box() {
+    mItem = new std::string("toy_car");
 }
 
-type T struct {
-	S string
-}
-
-func (t *T) M() {
-	if t == nil {
-		fmt.Println("<nil>")
-		return
-	}
-	fmt.Println(t.S)
-}
-
-func describe(i I) {
-	fmt.Printf("(%v, %T)\n", i, i)
-}
-
-func interfaceTest2() {
-	var i I
-
-	var t *T
-	i = t
-	describe(i) // prints (<nil>, *main.T)
-	i.M() 	    // prints <nil>
-
-	i = &T{"hello"}
-	describe(i) // prints (&{hello}, *main.T)
-	i.M() 	    // prints hello
+Box::~Box() {
+    delete mItem;
 }
 ```
-
-On the other hand, a **nil interface value** holds neither `value` nor concrete `type`. Calling a method on a nil interface is a run-time error because there is no type inside the interface tuple to indicate which concrete method to call.
-
-```go
-var i I
-describe(i) // prints (<nil>, <nil>)
-i.M() 	    // runtime error
-```
-
-### Empty Interface
-
-The interface type that specifies zero methods is known as the empty interface: `interface{}`. An empty interface may hold values of any type (since every type implements at least zero methods). Empty interfaces are used by code that handles values of unknown type. For example, `fmt.Print` takes any number of arguments of type interface{}. It's function signature is: `func Print(a ...interface{}) (n int, err error)`
-
-```go
-var i interface{}
-fmt.Printf("(%v, %T)\n", i, i) // prints (<nil>, <nil>)
-
-i = 42
-fmt.Printf("(%v, %T)\n", i, i) // prints (42, int)
-
-i = "hello"
-fmt.Printf("(%v, %T)\n", i, i) // prints (hello, string)
-```
-
-### Type assertions
-
-A type assertion provides access to an interface value's underlying concrete value: `t := i.(T)`. If i does not hold a value of type T, the statement will trigger a panic (A special type of error, which stops regular flow of execution, executes any deferred function calls, and returns to parent, where the panic can be handled using `recover`). To test whether an interface value holds a specific type, a type assertion can return two values: the underlying value and a `boolean` value that reports whether the assertion succeeded. `t, ok := i.(T)`. If i holds a value of type `T`, then t will take that value and ok will be `true`. If not, ok will be `false` and t will be the zero value of type `T`, and no panic occurs.
-
-```go
-var i interface{} = "hello"
-
-s := i.(string)
-fmt.Println(s)     // prints hello
-
-s, ok := i.(string)
-fmt.Println(s, ok) // prints hello true
-
-f, ok := i.(float64)
-fmt.Println(f, ok) // prints 0 false
-
-f = i.(float64)    // triggers a panic
-fmt.Println(f)     // doesn't execute
-```
-
-### Type switch
-
-A type switch is a construct that permits several type assertions in series. A type switch is like a regular switch statement, but the cases in a type switch specify types (not values), and those types are compared against the type of the value held by the given interface value.
-
-```go
-switch v := i.(type) { // type is a keyword
-case T:
-	// here v is the underlying value of i, which is a value of type T
-case S:
-	// here v is the underlying value of i, which is a value of type S
-default:
-	// None of the cases had the actual type; here v has the same type as the underlying type of i
+This is actually problematic in C++, the reason being that `std::string` properly defines a copy constructor. Consider what happens with the following code:
+```c++
+int main() {
+    Box b1;
+    Box b2 = b1;
 }
 ```
+When exiting the `main()` function, the destructor for both `b1` and `b2` are called, but b1 and b2 will point to the same `std:string` in the heap. This will lead to 
+delete being called on the same `std:string` twice, causing the program to crash. The remedy is simple:
+```c++
+class Box {
+public:
+    Box();
+    std::string mItem;
+};
 
-### Applications of Interface: **Stringers**
-
-```go
-type Stringer interface {
-	String() string
+Box::Box() {
+    mItem = "toy_car";
 }
 ```
-One of the most ubiquitous interfaces is `Stringer` defined by the `fmt` package. A `Stringer` is a type that can describe itself as a string. The `fmt` package (and many others) look for this interface to print values. It's similar to `toString()` that's present in all Java objects.
+Just let the `std:string` manage its own memory. Whenever an object is about to be destructed, it will automatically call the destructors
+of all its member variables. This creates an automatic chain of destruction, where you don't need to manage any memory, as long as you are using modern
+C++ containers like `std:string`, `std:vector`, etc. Every parent in the hierarchy will destruct its children. Basically, it's better than the sum of its parts. 
+The whole mechanism composes. It scales elegantly.
 
-```go
-type Person struct {
-	Name string
-	Age  int
-}
+```c++
+class Warehouse{
+    Box boxes[4];	// Using the Box class from before
+};
 
-func (p Person) String() string {
-	return fmt.Sprintf("%v (%v years)\n", p.Name, p.Age)
-}
-
-func stringerTest() {
-	a := Person{"Harvey Dent", 42}
-	z := Person{"Batman", 81}
-	fmt.Println(a, z)
-	// prints: Harvey Dent (42 years)
-	//         Batman (81 years)
+int main() {
+    Warehouse warehouse;
 }
 ```
+allocates four `std::string` instances, four `Box` instances, one `Warehouse` instance and all the std:string's contents and everything is freed automacically.
 
-### Applications of Interface: **Errors**
+Extensive use of RAII is considered a best practice in C++ because of all the reasons above.
 
-Go programs express error state with `error` values. The `error` type is a built-in interface similar to `fmt.Stringer`:
-```go
-type error interface {
-    Error() string
-}
-```
-As with `fmt.Stringer`, the `fmt` package looks for the `error` interface when printing values.
+Now that we've disbanded the first reason to use dynamic allocation, what can we do about the second reason?
 
-```go
-import (
-	"fmt"
-	"time"
-)
+## Smart Pointers
 
-type MyError struct {
-	What string
-	When time.Time
-}
-
-func (e *MyError) Error() string {
-	return fmt.Sprintf("%s, at %v",
-		e.What, e.When)
-}
-
-// We can return a *MyError here since we have previously declared a method for *MyError, therefore implementing the `error` interface
-func run() error { 
-	return &MyError{
-		"it didn't work",
-		time.Now(),
-	}
-}
-
-func ErrorTest() {
-	if err := run(); err != nil {
-		fmt.Println(err) // prints: it didn't work, at 2020-10-12 21:05:04 +0000 UTC m=+0.000000001
-	}
-}
-```
-
-### Applications of Interface: **Readers**
-
-The `io` package specifies the `io.Reader` interface, which represents the read end of a stream of data. The Go standard library contains many implementations of these interfaces, including files, network connections, compressors, ciphers, and others. The `io.Reader` interface has a Read method:
-
-`func (T) Read(b []byte) (n int, err error)`
-
-Read populates the given byte slice with data and returns the number of bytes populated and an error value. It returns an `io.EOF` error when the stream ends. The following code creates a `strings.Reader` and consumes its output 4 bytes at a time.
-
-```go
-import (
-	"fmt"
-	"io"
-	"strings"
-)
-
-func readerTest() {
-	r := strings.NewReader("Hello")
-
-	b := make([]byte, 4)
-	for {
-		n, err := r.Read(b)
-		fmt.Printf("n = %v err = %v b = %v\n", n, err, b)
-		fmt.Printf("b[:n] = %q\n", b[:n])
-		if err == io.EOF {
-			break
-		}
-	}
-	// prints:
-	// n = 4 err = <nil> b = [72 101 108 108]
-	// b[:n] = "Hell"
-	// n = 1 err = <nil> b = [111 101 108 108]
-	// b[:n] = "o"
-	// n = 0 err = EOF b = [111 101 108 108]
-	// b[:n] = ""
-}
-```
-
-Here is an example of a custom Reader, which gives an infinite stream of 'A's.
-
-```go
-type MyReader struct{}
-
-func (r MyReader) Read(b []byte) (int, error) {
-	for i,_ := range b {
-		b[i] = byte('A')
-	}
-	return len(b), nil
-}
-```
-
-[Continued in Part 5](/blog/go-part-5)
-
-[Here's all the stuff I made while learning from the Go docs](https://github.com/GokulVSD/ScratchPad/tree/master/Go)
-
-
+As opposed to using regular pointers if we need a resource in a different scope and having to deal with the aformentioned problems with dynamic memory
+allocation, smart pointers like `unique_ptr`, `shared_ptr` solve the dangling reference problem, but they require coding discipline and have other 
+potential issues (like copyability and reference loops, however the latter can be overcome with the use of `weak_ptr`).

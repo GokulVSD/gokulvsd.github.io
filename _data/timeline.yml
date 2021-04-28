@@ -4,8 +4,8 @@
   location: Bengaluru
   from: 2021
   to: Present
-  description: <b><i>SpotIQ</i> | <i>Backend Developer</i></b><br>
-                <br><b>❯❯</b>&nbsp;&nbsp;	 SpotIQ is ThoughtSpot's AI driven analytics engine, where I will be working towards improving relevancy of in-memory AI generated insights by optimising query efficiency over cloud-connected data stores.
+  description: <b><i>SpotIQ</i> | <i>Backend Developer</i></b>
+                <br><br><b>❯❯</b>&nbsp;&nbsp;	 SpotIQ is ThoughtSpot's AI driven analytics engine, where I will be working towards improving relevancy of in-memory AI generated insights by statistically modelling salient metrics and writing optimisation algorithms to improve query efficiency over cloud-connected data stores.
 
 - title: Software Engineer
   organisation: Société Générale
@@ -13,8 +13,8 @@
   location: Bengaluru
   from: 2020
   to: 2021
-  description: <b><i>Digital Workplace Services</i> | <i>Fullstack Developer</i></b><br>
-                <br><b>❯❯</b>&nbsp;&nbsp; Built a proactive data analytics platform for performance reports and scrubbing support tickets, orchestrating self-healing scripts and automations through Azure Cloud Services. 
+  description: <b><i>Digital Workplace Services</i> | <i>Fullstack Developer</i></b>
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Built a proactive data analytics platform for performance reports and scrubbing support tickets, orchestrating self-healing scripts and automations through Azure Cloud Services. 
                 <br><br><b>❯❯</b>&nbsp;&nbsp; Designed and developed a fully RESTful universal Quiz and Anonymous Survey Platform using the MERN stack, with robust anti-cheat measures and asynchronous session persistence.
                 <br><br><b>❯❯</b>&nbsp;&nbsp; Collaborated on augmenting the internal asset management platform with a task verification queue microservice.
 
@@ -24,8 +24,8 @@
   location: Electronic City Campus, Bengaluru
   from: 2016
   to: 2020
-  description: <b><i>Undergraduate degree in Bachelors of Engineering</i> | <i>Computer Science & Engineering</i></b><br>
-                <br><b>❯❯</b>&nbsp;&nbsp; Relevant courses I took included Design and Analysis of Algorithms, Data Structures, File Structures, Computer Networks, OOPs, Design Patterns, Operating Systems,
+  description: <b><i>Undergraduate degree in Bachelors of Engineering</i> | <i>Computer Science & Engineering</i></b>
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Relevant courses I took included Design and Analysis of Algorithms, Data Structures, File Structures, Computer Networks, OOPs, Design Patterns, Operating Systems,
                 DBMS, Data Mining, Big Data Analytics, Machine Learning, Artificial Intelligence, Information and Network Security and Web Development.
 
 - title: Lead Video Producer | Director
