@@ -4,7 +4,8 @@
   location: Bengaluru
   from: 2021
   to: Present
-  description: Upcoming Backend developer for SpotIQ, ThoughtSpot's AI driven analytics engine. 
+  description: <b><i>SpotIQ</i> | <i>Backend Developer</i></b><br>
+                <br><b>❯❯</b>&nbsp;&nbsp;	 SpotIQ is ThoughtSpot's AI driven analytics engine, where I will be working towards improving relevancy of in-memory AI generated insights by optimising query efficiency over cloud-connected data stores.
 
 - title: Software Engineer
   organisation: Société Générale
@@ -12,10 +13,10 @@
   location: Bengaluru
   from: 2020
   to: 2021
-  description: Responsible for planning, designing, augmenting and building tools, platforms and service automations of internal processes.
-                <br>Built a proactive data analytics platform for performance reports and scrubbing support tickets, orchestrating self-healing scripts and automations through Azure Cloud Services. 
-                <br>Designed and developed a fully RESTful universal Quiz and Anonymous Survey Platform using the MERN stack, with robust anti-cheat measures and asynchronous session persistence.
-                <br>Collaborated on augmenting the internal asset management platform with a task verification queue microservice.
+  description: <b><i>Digital Workplace Services</i> | <i>Fullstack Developer</i></b><br>
+                <br><b>❯❯</b>&nbsp;&nbsp; Built a proactive data analytics platform for performance reports and scrubbing support tickets, orchestrating self-healing scripts and automations through Azure Cloud Services. 
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Designed and developed a fully RESTful universal Quiz and Anonymous Survey Platform using the MERN stack, with robust anti-cheat measures and asynchronous session persistence.
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Collaborated on augmenting the internal asset management platform with a task verification queue microservice.
 
 - title: Student
   organisation: PES University
@@ -23,22 +24,22 @@
   location: Electronic City Campus, Bengaluru
   from: 2016
   to: 2020
-  description: Undergraduate degree in Bachelors of Engineering, Computer & Information Science.
-                <br>Relevant courses I took included Design and Analysis of Algorithms, Data Structures, File Structures, Computer Networks, OOPs, Design Patterns, Operating Systems,
+  description: <b><i>Undergraduate degree in Bachelors of Engineering</i> | <i>Computer Science & Engineering</i></b><br>
+                <br><b>❯❯</b>&nbsp;&nbsp; Relevant courses I took included Design and Analysis of Algorithms, Data Structures, File Structures, Computer Networks, OOPs, Design Patterns, Operating Systems,
                 DBMS, Data Mining, Big Data Analytics, Machine Learning, Artificial Intelligence, Information and Network Security and Web Development.
 
-- title: Lead Video Producer / Director
+- title: Lead Video Producer | Director
   organisation: Biz Doors
   website: http://bizdoors.com/
   location: Bengaluru
   from: 2015
   to: 2016
-  description: A side-gig during my 12th grade. Was in charge principle photography, creative direction and editing in the production of videos for corporate clients.
+  description: <b>❯❯</b>&nbsp;&nbsp; A side-gig during my 12th grade. Was in charge principle photography, creative direction and editing in the production of videos for corporate clients.
 
 - title: PC Building
   organisation: Self Employed
   location: Bengaluru
   from: 2013
   to: 2015
-  description: A side-hussle while I was in High School. Researched, picked, and assembled parts along with troubleshooting and setup for friends, family and acquaintances.
+  description: <b>❯❯</b>&nbsp;&nbsp; A side-hustle while I was in High School. Researched, picked, and assembled parts along with troubleshooting and setup for friends, family and acquaintances.
 
