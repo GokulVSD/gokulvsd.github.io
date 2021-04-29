@@ -44,7 +44,7 @@ function and keep the allocated memory block.
 
 Compared to other languages, dynamic allocation by the **you** in C++ is often unnecessary. C++ has a neat construct called a destructor, which is a mechanism that 
 allows you to manage resources by aligning the lifetime of the resource with the lifetime of a variable. 
-This technique is called RAII ([Resource Acquisition Is Initialization](https://en.wikipedia.org/wiki/Resource_acquisition_is_initialization)) and is a huge
+This technique is called RAII [(Resource Acquisition Is Initialization)](https://en.wikipedia.org/wiki/Resource_acquisition_is_initialization) and is a huge
 upside in using C++. In other words, we are removing the necessity to use the first reason to use dynamic allocation above, by making it not the code writer's 
 problem. Objects "wrap" resources within them. std::string is a perfect example. Observe the following code:
 ```c++
@@ -52,8 +52,8 @@ int main(int argc, char* argv[]) {
     std::string s(argv[0]);
 }
 ```
-Wait a minute, we're actually allocating a variable amount of memory here, as the size of s is an input to the program. How? well, 
-the std::string object allocates memory using the heap in its constructor and releases it in its destructor. The destructor is automatically invoked
+Wait a minute, we're actually allocating a variable amount of memory here, as the size of `s` is an input to the program. How? well, 
+the `std::string` object allocates memory using the heap in its constructor and releases it in its destructor. The destructor is automatically invoked
 when we are about to leave the scope where the variable `s` exists.
 In this case, you did not need to manually manage any resources for `s` and still got the benefits of dynamic memory allocation.
 
@@ -74,6 +74,7 @@ To sum up the benefits of the approach (automatic allocation with RAII):
 * Faster to run because you no longer need a garbage collector (which C++ does not have)
 * Less prone to memory/resource leaks.
 * And a nuanced reason, consider the following code:
+
 ```c++
 class Box {
 public:
@@ -97,7 +98,7 @@ int main() {
     Box b2 = b1;
 }
 ```
-When exiting the `main()` function, the destructor for both `b1` and `b2` are called, but b1 and b2 will point to the same `std:string` in the heap. This will lead to 
+When exiting the `main()` function, the destructor for both `b1` and `b2` are called, but `b1` and `b2` will point to the same `std:string` in the heap. This will lead to 
 delete being called on the same `std:string` twice, causing the program to crash. The remedy is simple:
 ```c++
 class Box {
@@ -133,5 +134,120 @@ Now that we've disbanded the first reason to use dynamic allocation, what can we
 ## Smart Pointers
 
 As opposed to using regular pointers if we need a resource in a different scope and having to deal with the aformentioned problems with dynamic memory
-allocation, smart pointers like `unique_ptr`, `shared_ptr` solve the dangling reference problem, but they require coding discipline and have other 
-potential issues (like copyability and reference loops, however the latter can be overcome with the use of `weak_ptr`).
+allocation, smart pointers like `std::unique_ptr`, `std::shared_ptr` solve the dangling reference problem in the absence of a garbage collector, 
+but they require coding discipline and have other potential issues (like copyability and reference cycles, however the latter can be overcome with 
+the use of `std::weak_ptr`).
+
+Using Smart Pointers, we can make pointers work in such a way that we don’t need to explicitly call delete. A smart pointer is a wrapper class over a pointer 
+with operators like `*` and `->` overloaded. The objects of smart pointer class look like a pointer but can do many things that a normal pointer can’t, 
+like automatic destruction, reference counting and more.
+
+### Types of Smart Pointer
+
+* `std::unique_ptr`: It allows only one pointer to some memory in the heap (or an object). It does this by overloading the copy and assignment operator constructors. The only way
+you can shift this pointer is by using the move constructor. The raw pointer it wraps is deallocated when the `std::unique_ptr` gets assigned a different `std::unique_ptr` or 
+it moves out of scope (destructed). 
+(move constructor and move semantics are discussed in detail in part 2, for now, just know that
+when you move a pointer from one variable to another, the original variable will point to nullptr, and the new variable will now point to what the original
+variable was originally pointing to).
+```c++
+#include <memory>
+using namespace std;
+int main() {
+    std::unique_ptr<Box> b1;
+    std::unique_ptr<Box> b2;
+    b1 = b2;    // Fails
+    b1 = std::move(b2);     // b1 will point to what b2 was pointing to, b2 points to null
+    cout << b1->mItem << endl;
+}
+```
+
+* `std::shared_ptr`: Allows more than one pointer to point to some memory in heap (or an object) at a time. It’ll maintain a Reference Counter, which counts how many
+std::shared_ptr point to this object/memory. Destructing the std::shared_ptr at the end of a scope reduces the reference count. 
+The raw pointer it wraps is deallocated when the reference count reaches 0. It does this by overloading the copy and assignment operator constructors, 
+having a raw refCount pointer
+which is an unsigned int, which gets copied over to any new `std::shared_ptr` being created by the copy and assignment constructors. You can call `use_count()`
+on a `std::shared_ptr` to get the number of `std::shared_ptr` pointing to the same underlying memory.
+
+```c++
+#include <memory>
+
+int main() {
+    std::shared_ptr<Box> b1;
+    std::shared_ptr<Box> b2;
+    b1 = b2;    // Succeeds, b1.use_count() returns 2, so does b2.use_count() 
+}
+```
+
+* `std::weak_ptr`: Consider the following situation:
+
+```c++
+#include <memory>
+
+class Box {
+public:
+    std::shared_ptr<Box> m;
+}
+
+int main() {
+    std::shared_ptr<Box> A;
+    std::shared_ptr<Box> B;
+    A->m = B;
+    B->m = A;
+}
+```
+Here, we have a `std::shared_ptr` that contains a `std::shared_ptr` that points to another `std::shared_ptr`, and vice versa. This forms a reference cycle, and leaving the `main()`
+function scope does not destruct the objects pointed to by `A` or `B`. This is because their reference counts never reach 0.
+
+`std::weak_ptr` was designed to solve the "cyclical ownership" problem described above. A `std::weak_ptr` is an observer, it can observe and access the same object as a 
+`std::shared_ptr` (or other `std::weak_ptr`s), but it is not considered an owner. 
+Remember, when a shared pointer goes out of scope, it only considers whether other `std::shared_ptr` are co-owning the object. `std::weak_ptr` does not count towards the
+`std::shared_ptr` reference count.
+
+We can fix the above code snippet as follows:
+```c++
+#include <memory>
+
+class Box {
+public:
+    std::weak_ptr<Box> m;
+}
+
+int main() {
+    std::shared_ptr<Box> A;
+    std::shared_ptr<Box> B;
+    A->m = B;
+    B->m = A;
+}
+```
+The internal references to each other now no longer count towards the `std::shared_ptr` reference count, and hence `A` and `B` will successfully destruct on leaving 
+the scope.
+
+The downside of `std::weak_ptr` is that `std::weak_ptr` are not directly usable (they have no `->` operator). 
+To use a `std::weak_ptr`, you must first convert it into a `std::shared_ptr`, then you can use the `std::shared_ptr`. 
+To convert a `std::weak_ptr` into a `std::shared_ptr`, you can use the `lock()` member function. Here’s the above code snippet, updated to show this off:
+```c++
+#include <memory>
+
+class Box {
+public:
+    std::weak_ptr<Box> m;
+}
+
+int main() {
+    std::shared_ptr<Box> A;
+    std::shared_ptr<Box> B;
+    A->m = B;
+    B->m = A;
+
+    std::shared_ptr<Box> C = A->m.lock();
+    // C is basically B, and can be dereferenced using ->
+}
+```
+
+In a nutshell, `std::shared_ptr` can be used when you need multiple smart pointers that can co-own a resource. 
+The resource will be deallocated when the last `std::shared_ptr` goes out of scope. 
+`std::weak_ptr` can be used when you want a smart pointer that can see and use a shared resource, but does not participate in the ownership of that resource.
+
+
+[Continued in Part 2](/blog/c++-raii-and-its-implications-part-2)
