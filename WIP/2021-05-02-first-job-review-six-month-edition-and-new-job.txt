@@ -15,13 +15,14 @@ came to light that since I was from the south campus of PES, I was only allowed 
 
 The first sign that I should have picked up on, which was a dead giveaway that the role SG was hiring me for wasn't going to be at my caliber, was how incredibly
 easy I found SG's interview process to be, compared to the 2 previous companies. The screening coding round consisted of a couple of straight forward "follow the
-instructions" type coding questions. The in-person interviews started off with a group discussion, followed by a SINGLE interview by the manager of the team I would end up joining. He started off by saying "if you were able to get past the screening coding round, you are more than good enough for this role. Instead of testing you
+instructions" type coding questions. The in-person interviews started off with a group discussion, followed by a SINGLE interview by the manager of the team I would end up joining. 
+He started off by saying "if you were able to get past the screening coding round, you are more than good enough for this role. Instead of testing you
 technically, I will be evaluating you on your personality, resume, and conviction." As soon as the interview was over, I had a bit to think over the sequence of
 events, and I had a feeling that this company, and this role isn't really as technically inclined as I would want it to be.
 
 PES has a (stupid) placement policy, where you can have a maximum of one offer from a tier 1 company, which is a tier system based on pay range. SG fell in the
 highest pay range, and hence was classified as a tier 1 company. Once I got called into the HR room and got offered the job, rejecting it was pointless. 
-Once offered, I am inelegible to sit for for any other company that came to PES for placements.
+Once offered, I am inelegible to sit for any other company that came to PES for placements.
 
 At the time, I got pretty bad advice, telling me that I got a job that many people would dream of, and that I should take it easy for the rest of my final
 year. I listened to that advice, instead of applying off campus, because there were a lot of rumours saying that getting a job off campus is way harder, and
@@ -114,9 +115,9 @@ growth. On top of that, I wasn't really that confident in my abilities to get pa
 going to be easy. He did manage to convince me try over some beers, and so I did. He referred me, and over the course of the next week, I went through
 a screening coding round consisting of 3 tough coding questions, 2 rounds of coding interviews and a resume drill down round. They skipped the culture 
 fit round, I assume because they expect me to know and gel with their culture since I am good friends with an existing employee. I aced every coding 
-question they threw at me, some, even to my own surpise. I was confident I had cleared every round after I was done with one, but I was expecting there 
+question they threw at me, some, even to my own surpise. I was confident I had cleared every round after I was done with each, but I was expecting there 
 to be more rounds. They however, decided to hire me after the 2nd round. I'm super pumped, because I know I'm going to be the least experienced and least 
-skilled person in any room once I join, and all that means is that I get to learn a lot. This is going to be very good for my career in the long term, not mention 
+skilled person in any room once I join, and all that means is that I get to learn a lot. This is going to be very good for my career in the long term, not to mention 
 the substantial pay bump I got OVER my previous offer.
 
 I will be joining in as a Member of Technical Staff II (backend developer for SpotIQ, ThoughtSpot's AI driven analytics engine).

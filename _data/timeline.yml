@@ -16,7 +16,7 @@
   description: <b><i>Digital Workplace Services</i> | <i>Fullstack Developer</i></b>
                 <br><br><b>❯❯</b>&nbsp;&nbsp; Built a proactive data analytics platform for performance reports and scrubbing support tickets, orchestrating self-healing scripts and automations through Azure Cloud Services. 
                 <br><br><b>❯❯</b>&nbsp;&nbsp; Designed and developed a fully RESTful universal Quiz and Anonymous Survey Platform using the MERN stack, with robust anti-cheat measures and asynchronous session persistence.
-                <br><br><b>❯❯</b>&nbsp;&nbsp; Collaborated on augmenting the internal asset management platform with a task verification queue microservice.
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Collaborated on augmenting the internal asset management platform with a task verification queue microservice using Kafka.
 
 - title: Student
   organisation: PES University

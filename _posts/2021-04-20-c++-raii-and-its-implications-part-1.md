@@ -1,5 +1,5 @@
 ---
-title: "C++: RAII and its implications Part 1"
+title: "C++ RAII and its implications: Part 1"
 tags: [C++, Language]
 style: border
 color: primary
