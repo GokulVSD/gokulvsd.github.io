@@ -28,7 +28,7 @@ This is also the moment where destructors are invoked on every object in the sco
 ## The Heap
 The reason you would allocate memory in the heap instead of on the stack is for flexibility.
 Bookkeeping is more complex and allocation is slower. Because there is no implicit release point, you must release the memory manually, 
-using `delete` (`free` in C). However, the absence of an implicit release point is the key to the heap's flexibility.
+using `delete` (`free` in C). However, the absence of an implicit release point is the key to the flexibility when using heap.
 
 Even though using the heap is slower and opens the door to possible memory leaks or memory fragmentation, there are perfectly good use cases for dynamic allocation, 
 as it's less limited.
@@ -38,21 +38,21 @@ as it's less limited.
 * You don't know how much memory you need at compile time. For instance, when reading a text file into a string, you usually don't know what size the file has, 
 so you can't decide how much memory to allocate until you run the program.
 
-* You want to allocate memory which will persist after leaving the current scope. For instance, you may want to write a function `string readfile(string filename)` 
+* You want to allocate memory which will persist after leaving the current scope. For instance, you may want to write a function `std::string readfile(std::string filename)` 
 that returns the contents of a file. In this case, even if the stack could hold the entire file contents, you could not return from a 
 function and keep the allocated memory block.
 
-Compared to other languages, dynamic allocation by the **you** in C++ is often unnecessary. C++ has a neat construct called a destructor, which is a mechanism that 
+Compared to other languages, dynamic allocation by **you** in C++ is often unnecessary. C++ has a neat construct called a destructor, which is a mechanism that 
 allows you to manage resources by aligning the lifetime of the resource with the lifetime of a variable. 
 This technique is called RAII [(Resource Acquisition Is Initialization)](https://en.wikipedia.org/wiki/Resource_acquisition_is_initialization) and is a huge
 upside in using C++. In other words, we are removing the necessity to use the first reason to use dynamic allocation above, by making it not the code writer's 
-problem. Objects "wrap" resources within them. std::string is a perfect example. Observe the following code:
+problem. Objects "wrap" resources within them. `std::string` is a perfect example. Observe the following code:
 ```c++
 int main(int argc, char* argv[]) {
     std::string s(argv[0]);
 }
 ```
-Wait a minute, we're actually allocating a variable amount of memory here, as the size of `s` is an input to the program. How? well, 
+Wait a minute, we're actually allocating a variable amount of memory here, as the string to be stored in `s` is an input to the program. How? well, 
 the `std::string` object allocates memory using the heap in its constructor and releases it in its destructor. The destructor is automatically invoked
 when we are about to leave the scope where the variable `s` exists.
 In this case, you did not need to manually manage any resources for `s` and still got the benefits of dynamic memory allocation.
@@ -125,7 +125,7 @@ int main() {
     Warehouse warehouse;
 }
 ```
-allocates four `std::string` instances, four `Box` instances, one `Warehouse` instance and all the std:string's contents and everything is freed automacically.
+allocates four `std::string` instances, four `Box` instances, one `Warehouse` instance and all the `std:string`'s contents and everything is freed automacically.
 
 Extensive use of RAII is considered a best practice in C++ because of all the reasons above.
 
@@ -133,7 +133,7 @@ Now that we've disbanded the first reason to use dynamic allocation, what can we
 
 ## Smart Pointers
 
-As opposed to using regular pointers if we need a resource in a different scope and having to deal with the aformentioned problems with dynamic memory
+As opposed to using raw pointers if we need a resource in a different scope and we are having to deal with the aformentioned problems with dynamic memory
 allocation, smart pointers like `std::unique_ptr`, `std::shared_ptr` solve the dangling reference problem in the absence of a garbage collector, 
 but they require coding discipline and have other potential issues (like copyability and reference cycles, however the latter can be overcome with 
 the use of `std::weak_ptr`).
@@ -162,8 +162,8 @@ int main() {
 }
 ```
 
-* `std::shared_ptr`: Allows more than one pointer to point to some memory in heap (or an object) at a time. It’ll maintain a Reference Counter, which counts how many
-std::shared_ptr point to this object/memory. Destructing the std::shared_ptr at the end of a scope reduces the reference count. 
+* `std::shared_ptr`: Allows more than one pointer to point to some memory in heap (or an object) at a time. It maintains a reference counter, which counts how many
+`std::shared_ptr` point to this object/memory. Destructing the `std::shared_ptr` at the end of a scope reduces the reference count. 
 The raw pointer it wraps is deallocated when the reference count reaches 0. It does this by overloading the copy and assignment operator constructors, 
 having a raw refCount pointer
 which is an unsigned int, which gets copied over to any new `std::shared_ptr` being created by the copy and assignment constructors. You can call `use_count()`
@@ -200,7 +200,7 @@ Here, we have a `std::shared_ptr` that contains a `std::shared_ptr` that points 
 function scope does not destruct the objects pointed to by `A` or `B`. This is because their reference counts never reach 0.
 
 `std::weak_ptr` was designed to solve the "cyclical ownership" problem described above. A `std::weak_ptr` is an observer, it can observe and access the same object as a 
-`std::shared_ptr` (or other `std::weak_ptr`s), but it is not considered an owner. 
+`std::shared_ptr` (or other `std::weak_ptr`'s), but it is not considered an owner. 
 Remember, when a shared pointer goes out of scope, it only considers whether other `std::shared_ptr` are co-owning the object. `std::weak_ptr` does not count towards the
 `std::shared_ptr` reference count.
 

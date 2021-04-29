@@ -71,7 +71,7 @@ public:
 Modern C++ and the STL library defined elegant containers like `std::string` and `std::vector`, etc. that can very efficienty perform
 operations that involve shifting around their elements.
 
-Traditionally, without having a RAII and therefore without a move constructor, any operation than involved shifting elements around
+Traditionally, without having RAII and therefore without a move constructors and destructors, any operation than involved shifting elements around
 (say due to sorting, or increasing the container size because it is full) would involve having to copy the elements over into a new memory location.
 
 This can get very expensive, consider a `std::string`, it can contain a huge number of `char`, and if a vector of strings needs to be resized,
@@ -81,7 +81,7 @@ location, which includes copying **every** `char` in every `std::string`.
 With move semantics, which are a consequential benefit of RAII, when resizing the same vector, instead of copying every `char` in every `std::string` over,
 we can move (steal) the resources from the `std::string` from the original vector. The `char` collection within a `std::string` is stored somewhere
 in memory right? Why don't we just copy over just the pointer to this memory into the new `std::string` in the newly allocated vector? That is
-exactly what the move constructor does. 
+exactly what the move constructor does.
 
 As you can imagine, this scales very well, say you have a container of a container of a container. Each outer container can call the move constructors
 of the inner containers, and so on, until the primitive data types or pointers are encountered, which are copied over. The container that had its
@@ -96,7 +96,7 @@ You get this massive speed up, without writing any additonal code whatsoever.
 
 With the core principles of RAII out of the way, we can begin to get into some of the differences between C++ and other languages, and the rationale behind them.
 
-The general structure of the try-catch paradigm in C++ is similar to other languages, with one notable exception, C++ does not have a finally clause.
+The general structure of the try-catch paradigm in C++ is similar to other languages, with one notable difference, C++ does not have a finally clause.
 
 Following is the general syntax of try-catch in C++. Similar to other languages, if multiple catch clauses are defined, they must be arranged from most specific to most general. Always capture exceptions through reference, and not by value. This is because if you capture a derived exception into a base exception variable, the additional details from the derived exception are sliced out. You might as well get all the details of the exception being thrown, as it is anyway faster to pass
 by reference. 
@@ -156,7 +156,7 @@ As previously discussed, when exiting the scope, all variables defined in that s
 
 ### Cost of using Exceptions
 
-There is little to no cost to set up a try-catch if an exception is not thrown. However, if exceptions are thrown, time is used up (much more than `if`). It is hence recommended to use exceptions judiciously, and not just enclose everything in a try-catch. If you can predict and take care of certain situations without using exceptions, like form validation as an example, do so.
+There is little to no cost to set up a try-catch if an exception is not thrown. However, if exceptions are thrown, time is used up (much more than `if` statements). It is hence recommended to use exceptions judiciously, and not just enclose everything in a try-catch. If you can predict and take care of certain situations without using exceptions, like form validation as an example, do so.
 
 Exceptions are more useful with a deep calling hierarchy. Instead of checking the response of each function from the call stack for errors, exceptions automatically bubble up to where they can be caught and handled, saving you a bunch of checking.
 
