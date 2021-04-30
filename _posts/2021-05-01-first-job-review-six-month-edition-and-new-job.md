@@ -1,5 +1,5 @@
 ---
-title: "First Job Review: Six Month Edition (And New Job!)"
+title: "First job review: Six month edition (And new job!)"
 tags: [Life Update]
 style: fill
 color: success
@@ -120,5 +120,5 @@ to be more rounds. They however, decided to hire me after the 2nd round. I'm sup
 skilled person in any room once I join, and all that means is that I get to learn a lot. This is going to be very good for my career in the long term, not to mention 
 the substantial pay bump I got OVER my previous offer.
 
-I will be joining in as a Member of Technical Staff II (backend developer for SpotIQ, ThoughtSpot's AI driven analytics engine).
+I will be joining in as a Member of Technical Staff II (backend developer for SpotIQ, ThoughtSpot's AI driven analytics engine) day after tomorrow.
 
