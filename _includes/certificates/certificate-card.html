@@ -6,14 +6,14 @@
 {%- endif -%}
 
 <div class="wow animated fadeIn" data-wow-delay=".15s">
-  <a href="{{ certificate_url }}" class="project card text-dark">
+  <a href="{{ certificate_url }}" class="project card text-dark certcard">
     <img class="card-img-top" src="{{ certificate.image }}" alt="Could not load" />
     <div class="card-body">
       <h5 class="card-title">
         {{ certificate.title }}
       </h5>
         {%- for tag in certificate.type -%}
-        <span class="badge badge-pill text-primary border border-primary ml-1">{{ tag }}</span>
+        <span class="badge badge-pill text-primary border border-primary ml-1 uninvert">{{ tag }}</span>
         {%- endfor -%}
       </p>
     </div>

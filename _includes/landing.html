@@ -5,13 +5,23 @@
     <div id="container" class="my-2">
       <div id="dummy"></div>
       <div id="element">
-        <img src="{{ '/assets/face.jpg' | relative_url }}" alt="{{ site.title }}" class="circle-image wow animated zoomIn" data-wow-delay=".1s">
+        <img src="{{ '/assets/face.jpg' | relative_url }}" alt="{{ site.title }}"
+          class="circle-image wow animated zoomIn" data-wow-delay=".1s"  style="visibility:hidden">
       </div>
     </div>
 
-    <p class="text-muted wow animated slideInUp" data-wow-delay=".15s">
-      I'm <strong>Gokul Vasudeva</strong>. I enjoy long walks on the beach, a cup of Earl Grey, and finding elegant solutions to problems.
-      </p>
+    <p class="text-muted wow animated slideInUp" data-wow-delay=".15s"  style="visibility:hidden">
+      I'm <strong>Gokul Vasudeva</strong>. I enjoy long walks on the beach, a cup of Earl Grey, and finding elegant
+      solutions to problems.
+    </p>
+
+    <div class="theme-switch-wrapper wow animated zoomIn" data-wow-delay="0.4s" style="visibility:hidden">
+      <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider-toggle"></div>
+        <div class="slider round"></div>
+      </label>
+    </div>
 
   </div>
 </div>
