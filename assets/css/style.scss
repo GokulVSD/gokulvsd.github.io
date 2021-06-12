@@ -127,7 +127,8 @@
   }
   
   .slider-toggle {
-    font-family: Linearicons-Free;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
     color: #707070;
     z-index: 1;
     background-color: #fff;
@@ -140,7 +141,8 @@
   }
 
   .slider-toggle::after {
-      content: "\e808";
+    // Dark
+      content: "\f186";
   }
   
   input:checked + .slider-toggle + .slider {
@@ -152,7 +154,8 @@
   }
 
   input:checked + .slider-toggle::after {
-    content: "\e807";
+    // Light
+    content: "\f185";
   }
   
   .slider.round {
