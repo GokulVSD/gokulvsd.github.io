@@ -127,3 +127,7 @@ img.emoji {
 .uninvert {
     filter: invert(1);
 }
+
+hr {
+    border-top: 1px solid #AAAA
+}
