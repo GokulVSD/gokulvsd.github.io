@@ -1,9 +1,9 @@
 ---
-title: "First job review: Six month edition (And new job!)"
+title: "First job review: Six month edition and my next job"
 tags: [Life Update]
 style: fill
 color: success
-description: My short-lived time at Societe Generale has come to an end, I give my feedback, and share my excitement for my next job.
+description: My short-lived time at Societe Generale has come to an end, I give my feedback, and share my excitement for my next job at ThoughtSpot.
 ---
 
 ## The backstory
@@ -98,13 +98,13 @@ business-intelligence analytics search software.
 
 I was pretty happy with the first offer I got, as it was a substantial pay bump for me, and the type of work would be a lot better in terms of my career
 growth. On top of that, I wasn't really that confident in my abilities to get past the interview process for ThoughtSpot, because I had heard it wasn't
-going to be easy. He did manage to convince me try over some beers, and so I did. He referred me, and over the course of the next week, I went through
-a screening coding round consisting of 3 tough coding questions, 2 rounds of coding interviews and a resume drill down round. They skipped the culture 
+going to be easy. He did manage to convince me to try over some beers, and so I did. He referred me, and over the course of the next week, I went through
+a screening coding round consisting of 3 challenging coding questions, 2 rounds of coding interviews and a resume drill down round. They skipped the culture 
 fit round, I assume because they expect me to know and gel with their culture since I am good friends with an existing employee. I aced every coding 
 question they threw at me, some, even to my own surpise. I was confident I had cleared every round after I was done with each, but I was expecting there 
 to be more rounds. They however, decided to hire me after the 2nd round. I'm super pumped, because I know I'm going to be the least experienced and least 
 skilled person in any room once I join, and all that means is that I get to learn a lot. This is going to be very good for my career in the long term, not to mention 
 the substantial pay bump I got OVER my previous offer.
 
-I will be joining in as a Member of Technical Staff II (backend developer for SpotIQ, ThoughtSpot's AI driven analytics engine) day after tomorrow.
+I will be joining in as a Member of Technical Staff II (backend developer for SpotIQ, ThoughtSpot's AI driven analytics engine) tomorrow.
 
