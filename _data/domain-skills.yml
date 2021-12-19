@@ -2,6 +2,10 @@
   percentage: 85
   color: danger
 
+- name: Web Dev & Security
+  percentage: 95
+  color: primary
+
 - name: Database & Networks
   percentage: 80
   color: info
@@ -10,10 +14,6 @@
   percentage: 90
   color: dark
 
-- name: Web Dev & Security
-  percentage: 95
-  color: primary
-
 - name: Machine Learning & AI
   percentage: 80
   color: warning
@@ -21,4 +21,8 @@
 - name: Misc (Most other CS fields)
   percentage: 75
   color: success
+
+- name: Media Production
+  percentage: 70
+  color: secondary
 

@@ -1,0 +1,27 @@
+- name: C & C++
+  percentage: 90
+  color: info
+
+- name: Java & Python
+  percentage: 95
+  color: success
+
+- name: JavaScript & React
+  percentage: 85
+  color: warning
+
+- name: Go & Rust
+  percentage: 70
+  color: secondary
+
+- name: MongoDB & PostgreSQL & Kafka
+  percentage: 85
+  color: dark
+
+- name: TensorFlow & Scikit Learn
+  percentage: 65
+  color: primary
+
+- name: Pandas & NumPy
+  percentage: 70
+  color: danger

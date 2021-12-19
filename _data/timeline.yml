@@ -5,7 +5,11 @@
   from: 2021
   to: Present
   description: <b><i>SpotIQ</i> | <i>Backend Developer</i></b>
-                <br><br><b>❯❯</b>&nbsp;&nbsp;	 SpotIQ is ThoughtSpot's AI driven analytics engine, where I will be working towards improving relevancy of in-memory AI generated insights by statistically modelling salient metrics and writing optimisation algorithms to improve query efficiency over cloud-connected data stores.
+                <br><br><b>❯❯</b>&nbsp;&nbsp; SpotIQ is ThoughtSpot's AI driven analytics engine built in C++, where I worked towards improving relevancy of in-memory AI generated insights by statistically modelling salient metrics and writing optimisation algorithms to improve querying efficiency over cloud-connected data stores. Introduced a machine learning library to replace handwritten statistical modelling logic.
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Spearheaded and took ownership of migrating SpotIQ to v2, which involved building a robust set of high throughput APIs to merge complex functionality by interfacing with multiple services, unlocking new features, and improving ROI.
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Drastically improved SpotIQ codebase and testing, improved query efficiency and error tolerance, caught and fixed a large number of critical bugs, all of which allowed for new use cases and massive improvement to SpotIQ reliability.
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Took ownership and was the POC for SpotIQ Comparative Analysis, significantly improving comparative analysis in the process. Worked on improving a scheduler built using Go. Built Jenkins pipelines for performing ETL on testing statistics from Gradle.
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Incubated and developed SpotIQ Cortex, which is an all-in-one machine learning and deep learning data modelling and sampling system with model repository management including model invalidation and resampling on new data ingress. Cortex allowed us to forecast and predict customer KPIs unlike anything else on the market, allowing for threshold based alerts and better insights.
 
 - title: Software Engineer
   organisation: Société Générale
@@ -14,7 +18,7 @@
   from: 2020
   to: 2021
   description: <b><i>Digital Workplace Services</i> | <i>Fullstack Developer</i></b>
-                <br><br><b>❯❯</b>&nbsp;&nbsp; Built a proactive data analytics platform for performance reports and scrubbing support tickets, orchestrating self-healing scripts and automations through Azure Cloud Services. 
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Built a proactive data analytics platform for performance reports and scrubbing support tickets, orchestrating self-healing scripts and automations through Azure Cloud Services.
                 <br><br><b>❯❯</b>&nbsp;&nbsp; Designed and developed a fully RESTful universal Quiz and Anonymous Survey Platform using the MERN stack, with robust anti-cheat measures and asynchronous session persistence.
                 <br><br><b>❯❯</b>&nbsp;&nbsp; Collaborated on augmenting the internal asset management platform with a task verification queue microservice using Kafka.
 
