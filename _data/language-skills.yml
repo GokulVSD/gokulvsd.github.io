@@ -18,7 +18,7 @@
   percentage: 85
   color: dark
 
-- name: TensorFlow & Scikit Learn
+- name: TensorFlow & SKLearn
   percentage: 65
   color: primary
 
