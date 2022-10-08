@@ -11,11 +11,11 @@
   color: info
 
 - name: Operating Systems & OOPs
-  percentage: 90
+  percentage: 85
   color: dark
 
 - name: Machine Learning & AI
-  percentage: 80
+  percentage: 85
   color: warning
 
 - name: Misc (Most other CS fields)

@@ -6,22 +6,22 @@
   percentage: 95
   color: success
 
-- name: JavaScript & React
-  percentage: 85
-  color: warning
-
 - name: Go & Rust
   percentage: 70
   color: secondary
 
-- name: MongoDB & PostgreSQL & Kafka
-  percentage: 85
-  color: dark
-
-- name: TensorFlow & SKLearn
-  percentage: 65
+- name: Machine Learning Libraries
+  percentage: 75
   color: primary
 
-- name: Pandas & NumPy
+- name: Backend Technologies
+  percentage: 75
+  color: dark
+
+- name: JavaScript, React & GraphQL
+  percentage: 90
+  color: warning
+
+- name: Front End Libraries
   percentage: 70
-  color: danger
+  color: warning
