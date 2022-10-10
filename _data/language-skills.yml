@@ -24,4 +24,4 @@
 
 - name: Front End Libraries
   percentage: 70
-  color: warning
+  color: success

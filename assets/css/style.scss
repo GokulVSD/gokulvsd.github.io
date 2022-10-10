@@ -114,11 +114,18 @@
   .theme-switch input {
     display:none;
   }
+
+  .slider.round {
+    cursor: default;
+  }
+
+  .slider-toggle {
+    cursor: pointer;
+  }
   
   .slider {
     background-color: #555;
     bottom: 0;
-    cursor: pointer;
     left: 0;
     position: absolute;
     right: 0;
