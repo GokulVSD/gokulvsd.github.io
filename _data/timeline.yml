@@ -1,11 +1,23 @@
+- title: Graduate Student
+  organisation: Arizona State University
+  website: https://asu.edu/
+  location: Tempe, Arizona
+  from: 2023
+  to: Present
+  description: <b><i>Master of Science</i> | <i>Computer Science</i></b>
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Foundations of Algorithms, Distributed and Multiprocessor operating systems, Multimedia Web Database.
+
 - title: Member of Technical Staff 4
   organisation: ThoughtSpot
   website: https://www.thoughtspot.com/
   location: Bengaluru
   from: 2023
-  to: Present
-  description:  <b><i>SpotIQ</i> | <i>Fullstack Developer</i></b>
-                <br><br><b>❯❯</b>&nbsp;&nbsp; To be updated.
+  to: 2023
+  description:  <b><i>SpotIQ</i> | <i>Backend + Frontend + ML Engineer</i></b>
+                <br><br><b>❯❯</b>&nbsp;&nbsp; ThoughtSpot is a fast paced BI product company where I've worked in a multi-disciplinary environment building complex systems from the ground up as a frontend, backend and ML engineer; responsible for SpotIQ, ThoughtSpot's AI engine.
+                <br><br><b>❯❯</b>&nbsp;&nbsp; By the end of tenure, led a dozen peers, drove technical decision making, re-architected SpotIQ, and had 300+ commits.
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Integrated DataRobot into ThoughtSpot, formulating the next generation of SpotIQ in the process. Expanded Cortex's responsibilities to support multi-tenant containerized AutoML, designed data caching, transport and all major flows.
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Designed contextual key driver analysis explaining unexpected changes in customer metrics; leveraged LLM gateways for prompt engineering insight narratives; drastically cut down SpotIQ tech-debt; Majorly improved time-series forecasting.
 
 - title: Member of Technical Staff 3
   organisation: ThoughtSpot
@@ -13,8 +25,10 @@
   location: Bengaluru
   from: 2022
   to: 2023
-  description:  <b><i>SpotIQ</i> | <i>Fullstack Developer</i></b>
-                <br><br><b>❯❯</b>&nbsp;&nbsp; Incubated and developed SpotIQ Cortex, a general-purpose time series forecasting and anomaly detection service with heterogeneous model orchestration including model ensembling, invalidation and retraining on new data ingress. Cortex allowed us to forecast and predict customer KPIs unlike anything else on the market, allowing for threshold based alerts and better insights.
+  description:  <b><i>SpotIQ</i> | <i>Backend + Frontend + ML Engineer</i></b>
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Incubated and built SpotIQ Cortex, a highly scalable general-purpose time series forecasting and anomaly detection service with heterogeneous model orchestration, including model ensembling, invalidation and retraining on new data ingress.
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Cortex allowed us to dynamically forecast and predict customer KPIs, enabling anomaly based alerting and better insights.
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Conceptualized and implemented custom time period comparison and live monitoring on non-Gregorian time series KPIs.
 
 - title: Member of Technical Staff 2
   organisation: ThoughtSpot
@@ -22,33 +36,28 @@
   location: Bengaluru
   from: 2021
   to: 2022
-  description:  <b><i>SpotIQ</i> | <i>Fullstack Developer</i></b>
-                <br><br><b>❯❯</b>&nbsp;&nbsp; SpotIQ is ThoughtSpot's AI driven analytics engine, where I worked towards improving relevancy of AI generated insights by statistically modelling salient metrics and writing optimisation algorithms to improve querying efficiency over cloud-connected data stores. Introduced a machine learning library to replace handwritten statistical modelling logic.
-                <br><br><b>❯❯</b>&nbsp;&nbsp; Spearheaded and took ownership of migrating SpotIQ to v2, which involved building a robust set of high throughput APIs to merge complex functionality by interfacing with multiple services, unlocking new features, and improving ROI.
-                <br><br><b>❯❯</b>&nbsp;&nbsp; Drastically improved SpotIQ codebase and testing, improved query efficiency and error tolerance, caught and fixed a large number of critical bugs, all of which allowed for new use cases and massive improvement to SpotIQ reliability.
-                <br><br><b>❯❯</b>&nbsp;&nbsp; Took ownership and was the POC for SpotIQ Comparative Analysis, significantly improving it in the process. Worked on improving a scheduler built using Go. Built Jenkins pipelines for performing ETL on testing metrics from Gradle.
-                <br><br><b>❯❯</b>&nbsp;&nbsp; Took complete responsibility for and developed the v2 implementation of SpotIQ R Analysis. Improved the Bazel build system.
+  description:  <b><i>SpotIQ</i> | <i>Backend + Frontend Engineer</i></b>
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Made major improvements to SpotIQ's C++ codebase including error tolerance and test coverage. Caught and fixed a large number of critical bugs, allowing for new use cases by increasing query efficiency over CDWs along with SpotIQ's reliability.
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Developed SpotIQ's V2 experience, took ownership of Comparative and R Analysis; Improved schema management in a cron scheduler written in Go; Reduced build times by optimizing rule execution in Bazel; Wrote Jenkins pipelines for data ETL.
 
 - title: Software Engineer
-  organisation: Société Générale
+  organisation: Societe Generale
   website: https://globalsolution.societegenerale.com/en/
   location: Bengaluru
   from: 2020
   to: 2021
   description:  <b><i>Digital Workplace Services</i> | <i>Fullstack Developer</i></b>
-                <br><br><b>❯❯</b>&nbsp;&nbsp; Built a data analytics platform for performance reports, orchestrating self-healing and automations through Azure.
-                <br><br><b>❯❯</b>&nbsp;&nbsp; Developed a RESTful universal quiz and survey platform using the MERN stack, with anti-cheat measures and asynchronous session persistence.
-                <br><br><b>❯❯</b>&nbsp;&nbsp; Collaborated on augmenting the internal asset management platform with a task verification queue microservice utilising Kafka.
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Developed an analytics platform for performance reports, orchestrating self-healing and automations through Azure. Created a universal quiz and survey platform using the MERN stack, with anti-cheat and asynchronous session persistence.
 
-- title: Student
+- title: Undergraduate Student
   organisation: PES University
-  website: https://pesitsouth.pes.edu/
+  website: https://pes.edu/
   location: Electronic City Campus, Bengaluru
   from: 2016
   to: 2020
-  description: <b><i>Undergraduate degree in Bachelors of Engineering</i> | <i>Computer Science & Engineering</i></b>
+  description: <b><i>Bachelors of Engineering</i> | <i>Computer Science & Engineering</i></b>
                 <br><br><b>❯❯</b>&nbsp;&nbsp; Relevant courses I took included Design and Analysis of Algorithms, Data Structures, File Structures, Computer Networks, OOPs, Design Patterns, Operating Systems,
-                DBMS, Data Mining, Big Data Analytics, Machine Learning, Artificial Intelligence, Information and Network Security and Web Development.
+                DBMS, Data Mining, Big Data Analytics, Machine Learning, Artificial Intelligence, Information & Network Security and Web Development.
 
 - title: Lead Video Producer | Director
   organisation: Biz Doors
