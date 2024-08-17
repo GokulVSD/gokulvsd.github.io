@@ -4,8 +4,9 @@
   location: Cupertino, California
   from: 2024
   to: Present
-  description: <b><i>Search Ads Platform</i> | <i>Engineering</i></b>
-                <br><br><b>❯❯</b>&nbsp;&nbsp; Upcoming Intern in Apple's Search Ads platform, working on anomaly detection and attribution using generative AI in the cloud.
+  description:  <b><i>Search Ads</i> | <i>Engineering</i></b>
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Championed and built a new production-ready GenAI platform for ad metrics alerting, attribution, anomaly detection and an elegant modular knowledge recall framework through Retrieval Augmented Generation (RAG), leveraging Apple's foundation models.
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Set up associated OAuth, pipelines for containerization and CI/CD using Jenkins and Spinnaker for production deployments to EKS.
 
 - title: Graduate Student
   organisation: Arizona State University
@@ -14,54 +15,54 @@
   from: 2023
   to: Present
   description: <b><i>Master of Science</i> | <i>Computer Science</i></b>
-                <br><br><b>❯❯</b>&nbsp;&nbsp; Foundations of Algorithms, Distributed and Multiprocessor operating systems, Multimedia Web Database.
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Foundations of Algorithms, Distributed and Multiprocessor operating systems, Multimedia Web Database, Knowledge Representation and Reasoning, Data Intensive Systems for Machine Learning, Cloud Computing, Software Security, Mobile Computing, Data Processing at Scale.
 
 - title: Member of Technical Staff 4
   organisation: ThoughtSpot
   website: https://www.thoughtspot.com/
-  location: Bengaluru
+  location: Bengaluru, Karnataka
   from: 2023
   to: 2023
   description:  <b><i>SpotIQ</i> | <i>Backend + Frontend + ML Engineer</i></b>
-                <br><br><b>❯❯</b>&nbsp;&nbsp; ThoughtSpot is a fast paced BI product company solving natural language search and leveraging generative AI to unearth insights from data; I was responsible for SpotIQ, ThoughtSpot's AI engine, building and scaling ML insight generation.
-                <br><br><b>❯❯</b>&nbsp;&nbsp; By the end of tenure, I drove technical decision making and led efforts to re-architect SpotIQ, with 300+ commits in one year.
-                <br><br><b>❯❯</b>&nbsp;&nbsp; Working in multiple frontend, backend and ML stacks, I integrated DataRobot end-to-end into ThoughtSpot. Expanded our in-house AutoML engine Cortex to support multi-tenant containerization, designed data caching, transport and all major flows.
-                <br><br><b>❯❯</b>&nbsp;&nbsp; Designed contextual key driver analysis explaining unexpected changes in customer metrics; leveraged LLM gateways for prompt engineering insight narratives; drastically cut down SpotIQ tech-debt; Improved time-series forecasting reliability.
+                <br><br><b>❯❯</b>&nbsp;&nbsp; ThoughtSpot is a fast paced BI product company solving natural language search and leveraging Generative AI to unearth insights from data. I was responsible for SpotIQ, ThoughtSpot's AI engine, building and scaling ML based insight generation.
+                <br><br><b>❯❯</b>&nbsp;&nbsp; By the end of my tenure, I drove technical decision making and led efforts to re-architect SpotIQ, with 300+ PRs in one year.
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Working in multiple frontend, backend and ML stacks, I integrated DataRobot end-to-end into ThoughtSpot. Expanded our in-house AutoML engine Cortex to support multi-tenant containerization, designed the data caching layer, data transport and all major flows.
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Designed contextual key driver analysis explaining unexpected changes in customer metrics; leveraged GPT LLMs for prompt engineering insight narratives. Drastically cut down SpotIQ tech debt, resulting in team-wide productivity improvements.
 
 - title: Member of Technical Staff 3
   organisation: ThoughtSpot
   website: https://www.thoughtspot.com/
-  location: Bengaluru
+  location: Bengaluru, Karnataka
   from: 2022
   to: 2023
   description:  <b><i>SpotIQ</i> | <i>Backend + Frontend + ML Engineer</i></b>
-                <br><br><b>❯❯</b>&nbsp;&nbsp; Incubated and built SpotIQ Cortex, a highly scalable general-purpose time series forecasting and anomaly detection service with heterogeneous model orchestration, including model ensembling, invalidation and retraining on new data ingress.
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Incubated and built SpotIQ Cortex, a highly scalable general-purpose time series forecasting and anomaly detection service with MLOps for heterogeneous model orchestration, model ensembling, invalidation and retraining on new data ingress.
                 <br><br><b>❯❯</b>&nbsp;&nbsp; Cortex allowed us to dynamically forecast and predict customer KPIs, enabling anomaly based alerting and better insights.
                 <br><br><b>❯❯</b>&nbsp;&nbsp; Conceptualized and implemented custom time period comparison and live monitoring on non-Gregorian time series KPIs.
 
 - title: Member of Technical Staff 2
   organisation: ThoughtSpot
   website: https://www.thoughtspot.com/
-  location: Bengaluru
+  location: Bengaluru, Karnataka
   from: 2021
   to: 2022
   description:  <b><i>SpotIQ</i> | <i>Backend + Frontend Engineer</i></b>
                 <br><br><b>❯❯</b>&nbsp;&nbsp; Made major improvements to SpotIQ's C++ codebase including error tolerance and test coverage. Caught and fixed a large number of critical bugs, allowing for new use cases by increasing query efficiency over CDWs along with SpotIQ's reliability.
-                <br><br><b>❯❯</b>&nbsp;&nbsp; Developed SpotIQ's V2 experience, took ownership of Comparative and R Analysis; Improved schema management in a cron scheduler written in Go; Reduced build times by optimizing rule execution in Bazel; Wrote Jenkins pipelines for data ETL.
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Developed SpotIQ's V2 experience in Java, took ownership of Comparative and R Analysis. Improved schema management in a cron scheduler written in Go. Reduced build times by optimizing rule execution in Bazel. Wrote Jenkins pipelines for data ETL.
 
 - title: Software Engineer
   organisation: Societe Generale
   website: https://globalsolution.societegenerale.com/en/
-  location: Bengaluru
+  location: Bengaluru, Karnataka
   from: 2020
   to: 2021
   description:  <b><i>Digital Workplace Services</i> | <i>Fullstack Developer</i></b>
-                <br><br><b>❯❯</b>&nbsp;&nbsp; Developed an analytics platform for performance reports, orchestrating self-healing and automations through Azure. Created a universal quiz and survey platform using the MERN stack, with anti-cheat and asynchronous session persistence.
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Built an analytics platform on Azure. Created a quiz and survey platform on the MERN stack with asynchronous session persistence.
 
 - title: Undergraduate Student
   organisation: PES University
   website: https://pes.edu/
-  location: Electronic City Campus, Bengaluru
+  location: Electronic City Campus, Bengaluru, Karnataka
   from: 2016
   to: 2020
   description: <b><i>Bachelors of Engineering</i> | <i>Computer Science & Engineering</i></b>
@@ -71,14 +72,14 @@
 - title: Lead Video Producer | Director
   organisation: Biz Doors
   website: http://bizdoors.com/
-  location: Bengaluru
+  location: Bengaluru, Karnataka
   from: 2015
   to: 2016
   description: <b>❯❯</b>&nbsp;&nbsp; A side-gig during my 12th grade. Was in charge principle photography, creative direction and editing in the production of videos for corporate clients.
 
 - title: PC Building
   organisation: Self Employed
-  location: Bengaluru
+  location: Bengaluru, Karnataka
   from: 2013
   to: 2015
   description: <b>❯❯</b>&nbsp;&nbsp; A side-hustle while I was in High School. Researched, picked, and assembled parts along with troubleshooting and setup for friends, family and acquaintances.

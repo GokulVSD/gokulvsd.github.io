@@ -1,12 +1,17 @@
-- title: India Research and Development Excellence Award
+- title: Cortex - Mine actionable insights on key metrics from freshly ingested data
+  achievement: US Patent and Trademark Office
+  date: 2022
+  description: Co-invented Cortex, a novel paradigm for anomaly detection through time series forecast deviations and AutoML.
+
+- title: R&D Excellence Award
   achievement: ThoughtSpot
   date: 2022
-  description: For taking strong ownership of SpotIQ and consistency in delivering on high impact deliverables with diligence and customer empathy.
+  description: Took strong ownership of SpotIQ. Was consistent on high impact deliverables with diligence, customer empathy and agility.
 
 - title: 1st Place
   achievement: InGenius Hackathon
   date: 2017
-  description: For Wuasta, won in the 1st year category. 
+  description: Built an Android app that utilized Google Maps APIs to find an ideal meet up location considering time-to-reach.
 
 - title: Most Social Outgoing Student
   achievement: Bethany Junior College
@@ -16,12 +21,12 @@
 - title: Excellence in Computer Programming & Technical Expertise
   achievement: Bethany Junior College
   date: 2016
-  description: Awarded for IT work and troubleshooting during my 12th grade. 
+  description: Awarded for IT work and troubleshooting during my 12th grade.
 
 - title: Honorary Award
   achievement: HP Enterprise Code Wars
   date: 2015
-  description: For solving the most difficult problems in the shortest time. Held at Hewlett Packard Enterprise’s Whitefield Campus.
+  description: Solved the toughest problem in the shortest time, competing against 300+ peers.
 
 - title: Computer Science Topper
   achievement: Bethany High School
