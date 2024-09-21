@@ -1,7 +1,7 @@
 ### Site Settings ###
-title               : GokulVSD - blog & website - Gokul Vasudeva
-tagline             : Everything to do with Gokul Vasudeva
-description         : All about Gokul Vasudeva, including his blog, projects, achievements, resume and social links
+title               : GokulVSD
+tagline             : Blog & Website
+description         : Personal website - all about Gokul Vasudeva, including his blog, projects, achievements, resume and social links.
 url                 : https://gokulvsd.github.io
 baseurl             : ""
 
