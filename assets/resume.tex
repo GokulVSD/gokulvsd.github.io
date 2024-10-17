@@ -1,0 +1,216 @@
+%-------------------------
+% Resume in Latex
+% Author : Gokul Vasudeva
+% Based off of: https://github.com/jakegut/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-.75in}
+\addtolength{\evensidemargin}{-.5in}
+\addtolength{\textwidth}{1.45in}
+\addtolength{\topmargin}{-.8in}
+% Bottom Margin
+\addtolength{\textheight}{1.7in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-6pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Gokul Vasudeva} \\ \vspace{1pt}
+    \small 623-888-9818 $|$ \href{mailto:gokul.vasde@gmail.com}{\underline{gokul.vasde@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/gokulvsd}{\underline{linkedin.com/in/gokulvsd}} $|$
+    \href{https://gokulvsd.github.io}{\underline{gokulvsd.github.io}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Arizona State University}{Tempe, AZ}
+      {Master of Science in Computer Science}{Aug. 2023 -- May 2025}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Apple Inc.}{Cupertino, CA}
+      {Software Engineer Intern}{May 2024 -- Aug. 2024}
+    \resumeItemListStart
+        \resumeItem{Built a production-ready GenAI platform with React and FastAPI, leveraging Apple's JAX foundation models for App Store search ads alerting, attribution and anomaly detection by orchestrating resources on AWS with OAuth and RBAC}
+        \resumeItem{Developed a chatbot with an elegant modular knowledge recall framework using Retrieval Augmented Generation (RAG)}
+        \resumeItem{Set up pipelines for Docker, knowledge generation and CI/CD using Jenkins and Spinnaker for deployments to EKS}
+    \resumeItemListEnd
+
+
+    \resumeSubheading
+      {ThoughtSpot}{Bangalore, KA}
+      {Member of Technical Staff 4}{Feb 2023 -- Jul. 2023}
+    \resumeItemListStart
+        \resumeItem{SpotIQ is ThoughtSpot's AI engine, where I built and scaled ML based insight generation, progressing from junior IC to leading technical decision making, driving efforts to re-architect the product with 300+ PRs by the end of my tenure}
+        \resumeItem{Working with React, GraphQL, Java, C++, Python, Go, EC2, RDS and Postgres, I expanded Cortex, our in-house Machine Learning engine, to support multi-tenancy, designed the data caching layer, data transport and all major APIs}
+        \resumeItem{Built key driver analysis for changes in user metrics, and drastically reduced tech debt, improving team-wide productivity}
+    \resumeItemListEnd
+   
+    \resumeSubSubheading
+      {Member of Technical Staff 3}{Aug. 2022 -- Jan. 2023}
+    \resumeItemListStart
+        \resumeItem{Researched and built SpotIQ Cortex, a highly scalable general-purpose time-series forecasting and anomaly detection service with MLOps for heterogeneous model orchestration, ensembling, invalidation and retraining on new data ingress, allowing us to dynamically predict customer KPIs using Meta's Prophet and LinkedIn's Greykite}
+        \resumeItem{Implemented anomaly based alerting, custom calendar time period comparison and live monitoring of time-series KPIs}
+    \resumeItemListEnd
+
+    \resumeSubSubheading
+      {Member of Technical Staff 2}{May. 2021 -- Jul. 2022}
+    \resumeItemListStart
+        \resumeItem{Made major refactors and improvements to SpotIQ's C++ codebase including error tolerance and test coverage. Caught and fixed several critical bugs, increasing query efficiency over CDWs and improving reliability, leading to new use cases}
+        \resumeItem{Designed and built SpotIQ's next generation Tomcat Java APIs, improved schema management in a cron scheduler written in Go, and reduced build times by optimizing rule execution in Bazel. Wrote Jenkins pipelines in Groovy for data ETL}
+    \resumeItemListEnd
+
+
+    \resumeSubheading
+      {Societe Generale}{Bangalore, KA}
+      {Software Engineer}{Nov. 2020 -- Apr. 2021}
+    \resumeItemListStart
+        \resumeItem{Built an asynchronous session persistent quiz platform with surveys and analytics using MongoDB, Express and Node.js}
+    \resumeItemListEnd
+   \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+        \resumeItem{\textbf{MonoDAC}{: Monocular depth estimation built with OpenCV and TensorFlow using an encoder-decoder, employing Atrous Convolutions and ASPP, along with a web UI for real-time wireless image capture, depth inference and 3D point clouds}}
+        \resumeItem{\textbf{Crypticket}{: An offline capable cryptographic ticket generation and authentication platform using service workers and local storage caching. Built as a responsive PWA from scratch using React, utilizing EdDSA elliptic curve cryptography}}
+        \resumeItem{\textbf{Wuasta}{: A predictive alarm Android app built in Kotlin that pragmatically rings at the right time, taking into account real-time traffic conditions and historical data to find when to depart in order to arrive at another location at a predefined time}}
+        \resumeItem{\textbf{MidLLaMAI}{: Benchmarking suite for evaluating performance of compressed Hugging Face LLaMA models, focused on finding an optimal balance between different pruning and quantization techniques with varying number of LLM model parameters}}
+    \resumeSubHeadingListEnd
+
+
+%
+%-----------PUBLICATIONS & AWARDS-----------
+\section{Publications \& Awards}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Mine actionable insights on key metrics from freshly ingested data} $|$ \emph{US Patent and Trademark Office}}{May 2022}
+          \resumeItemListStart
+            \resumeItem{Co-invented Cortex, a novel paradigm for anomaly detection through time-series forecast deviations and AutoML}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{R\&D Excellence Award} $|$ \emph{ThoughtSpot}}{Mar. 2022}
+          \resumeItemListStart
+            \resumeItem{Took strong ownership of SpotIQ, was consistent with high impact deliverables, showcasing diligence and agility}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+    
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.1in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C, C++, Java, Python, Go, Rust, Kotlin, JavaScript, TypeScript, Node, GraphQL, Thrift, Bazel, Gradle, Bash, Git} \\
+     \textbf{Frameworks}{: React, Highcharts, Recharts, FastAPI, Flask, Spring Boot, Nginx, gRPC, PyTorch, Keras, NumPy, Pandas} \\
+     \textbf{Cloud}{: AWS EC2, EKS, ECR, EMR, S3, Glue, Lambda, SageMaker, MSK, RDS, SQS, SNS, Grafana, Elastic Search, Kibana, Splunk, Docker, Kubernetes, DataRobot, Datadog, Miro, Figma, Tableau, Snowflake, Protobuf, REST, microservice} \\
+     \textbf{Data}{: Spark, Cassandra, Hadoop, Kafka, ZooKeeper, Solr, Airflow, PostgreSQL, Redis, MongoDB, Celery, Qdrant, Prometheus}
+    }}
+ \end{itemize}
+
+
+
+%-------------------------------------------
+\end{document}
