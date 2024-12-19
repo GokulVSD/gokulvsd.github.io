@@ -1,0 +1,26 @@
+{% assign sorted = site.awards | sort: 'title' %}
+
+<br>
+<h2>Publications & Awards</h2>
+<hr>
+
+<div class="card-columns m-3 mt-1">
+  {% for award in sorted %}
+    {%- if award.type[0] == "Award" -%}
+    {% include awards/award-card.html %}
+    {%- endif -%}
+  {% endfor %}
+</div>
+<br>
+<h2>Technical Certifications</h2>
+<hr>
+
+<div class="card-columns m-3 mt-1">
+  {% for award in sorted %}
+    {%- if award.type[0] == "Technical" -%}
+    {% include awards/award-card.html %}
+    {%- endif -%}
+  {% endfor %}
+</div>
+
+

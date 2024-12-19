@@ -40,9 +40,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:name
-  certificates:
+  awards:
     output: true
-    permalink: /certificates/:title
+    permalink: /awards/:title
 
 
 
@@ -55,7 +55,7 @@ defaults:
       layout: "page"
   - scope:
       path: ""
-      type: "certificates"
+      type: "awards"
     values:
       comments: false
   - scope:
