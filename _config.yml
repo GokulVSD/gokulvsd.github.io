@@ -1,8 +1,9 @@
 ### Site Settings ###
 title               : GokulVSD
 tagline             : Blog & Website
-description         : Personal website - all about Gokul Vasudeva, including his blog, projects, achievements, resume and social links.
+description         : Personal website - All about Gokul Vasudeva, including his blog, projects, achievements, portfolio and resume.
 url                 : https://gokulvsd.github.io
+image               : /assets/website_shareable.jpg
 baseurl             : ""
 
 
