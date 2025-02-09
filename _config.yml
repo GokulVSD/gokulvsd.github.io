@@ -3,7 +3,7 @@ title               : GokulVSD
 tagline             : Blog & Website
 description         : Personal website - All about Gokul Vasudeva, including his blog, projects, achievements, portfolio and resume.
 url                 : https://gokulvsd.github.io
-image               : /assets/website_shareable.jpg
+teaser              : /assets/website_shareable.jpg
 baseurl             : ""
 
 
