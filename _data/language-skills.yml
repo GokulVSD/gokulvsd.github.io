@@ -11,7 +11,7 @@
   color: secondary
 
 - name: Machine Learning Libraries
-  percentage: 75
+  percentage: 80
   color: primary
 
 - name: Backend Technologies
@@ -23,5 +23,5 @@
   color: warning
 
 - name: Front End Libraries
-  percentage: 70
+  percentage: 80
   color: success

@@ -2,8 +2,8 @@
   organisation: Apple Inc.
   website: https://www.apple.com/
   location: Cupertino, CA
-  from: 2024
-  to: Present
+  from: 2024 May
+  to: 2024 August
   description:  <b><i>Search Ads</i> | <i>Engineering</i></b>
                 <br><br><b>❯❯</b>&nbsp;&nbsp; Built a production-ready GenAI platform with React and FastAPI, leveraging Apple's JAX foundation models for App Store search ads alerting, attribution and anomaly detection by orchestrating resources on AWS with OAuth and RBAC
                 <br><br><b>❯❯</b>&nbsp;&nbsp; Developed a chatbot with an elegant modular knowledge recall framework using Retrieval Augmented Generation (RAG)
@@ -13,8 +13,8 @@
   organisation: Arizona State University
   website: https://asu.edu/
   location: Tempe, AZ
-  from: 2023
-  to: Present
+  from: 2023 August
+  to: 2025 May
   description: <b><i>Master of Science</i> | <i>Computer Science</i></b>
                 <br><br><b>❯❯</b>&nbsp;&nbsp; Foundations of Algorithms, Distributed and Multiprocessor operating systems, Multimedia Web Database, Knowledge Representation and Reasoning, Data Intensive Systems for Machine Learning, Cloud Computing, Software Security, Mobile Computing, Data Processing at Scale.
 
@@ -22,8 +22,8 @@
   organisation: ThoughtSpot
   website: https://www.thoughtspot.com/
   location: Bangalore, KA
-  from: 2023
-  to: 2023
+  from: 2023 February
+  to: 2023 July
   description:  <b><i>SpotIQ</i> | <i>Backend + Frontend + ML Engineer</i></b>
                 <br><br><b>❯❯</b>&nbsp;&nbsp; SpotIQ is ThoughtSpot's AI engine, where I built and scaled ML based insight generation, progressing from junior IC to leading technical decision making, driving efforts to re-architect the product with 300+ PRs by the end of my tenure
                 <br><br><b>❯❯</b>&nbsp;&nbsp; Working with React, GraphQL, Java, C++, Python, Go, EC2, RDS and Postgres, I expanded Cortex, our in-house Machine Learning engine, to support multi-tenancy, designed the data caching layer, data transport and all major APIs
@@ -33,8 +33,8 @@
   organisation: ThoughtSpot
   website: https://www.thoughtspot.com/
   location: Bangalore, KA
-  from: 2022
-  to: 2023
+  from: 2022 August
+  to: 2023 January
   description:  <b><i>SpotIQ</i> | <i>Backend + Frontend + ML Engineer</i></b>
                 <br><br><b>❯❯</b>&nbsp;&nbsp; Researched and built SpotIQ Cortex, a highly scalable general-purpose time-series forecasting and anomaly detection service with MLOps for heterogeneous model orchestration, ensembling, invalidation and retraining on new data ingress, allowing us to dynamically predict customer KPIs using Meta's Prophet and LinkedIn's Greykite
                 <br><br><b>❯❯</b>&nbsp;&nbsp; Implemented anomaly based alerting, custom calendar time period comparison and live monitoring of time-series KPIs
@@ -43,8 +43,8 @@
   organisation: ThoughtSpot
   website: https://www.thoughtspot.com/
   location: Bangalore, KA
-  from: 2021
-  to: 2022
+  from: 2021 May
+  to: 2022 July
   description:  <b><i>SpotIQ</i> | <i>Backend + Frontend Engineer</i></b>
                 <br><br><b>❯❯</b>&nbsp;&nbsp; Made major refactors and improvements to SpotIQ's C++ codebase including error tolerance and test coverage. Caught and fixed several critical bugs, increasing query efficiency over CDWs and improving reliability, leading to new use cases
                 <br><br><b>❯❯</b>&nbsp;&nbsp; Designed and built SpotIQ's next generation Tomcat Java APIs, improved schema management in a cron scheduler written in Go, and reduced build times by optimizing rule execution in Bazel. Wrote Jenkins pipelines in Groovy for data ETL
@@ -53,8 +53,8 @@
   organisation: Societe Generale
   website: https://globalsolution.societegenerale.com/en/
   location: Bangalore, KA
-  from: 2020
-  to: 2021
+  from: 2020 November
+  to: 2021 April
   description:  <b><i>Digital Workplace Services</i> | <i>Fullstack Developer</i></b>
                 <br><br><b>❯❯</b>&nbsp;&nbsp; Built an asynchronous session persistent quiz platform with surveys and analytics using MongoDB, Express and Node.js
 
@@ -62,8 +62,8 @@
   organisation: PES University
   website: https://pes.edu/
   location: Bangalore, KA
-  from: 2016
-  to: 2020
+  from: 2016 August
+  to: 2020 August
   description: <b><i>Bachelors of Engineering</i> | <i>Computer Science & Engineering</i></b>
                 <br><br><b>❯❯</b>&nbsp;&nbsp; Relevant courses I took included Design and Analysis of Algorithms, Data Structures, File Structures, Computer Networks, OOPs, Design Patterns, Operating Systems,
                 DBMS, Data Mining, Big Data Analytics, Machine Learning, Artificial Intelligence, Information & Network Security and Web Development.
@@ -72,8 +72,8 @@
   organisation: Biz Doors
   website: http://bizdoors.com/
   location: Bangalore, KA
-  from: 2015
-  to: 2016
+  from: 2015 June
+  to: 2016 March
   description: <b>❯❯</b>&nbsp;&nbsp; A side-gig during my 12th grade. Was in charge principle photography, creative direction and editing in the production of videos for corporate clients.
 
 - title: PC Building
