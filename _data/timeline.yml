@@ -5,8 +5,8 @@
   from: 2024 May
   to: 2024 August
   description:  <b><i>Search Ads</i> | <i>Engineering</i></b>
-                <br><br><b>❯❯</b>&nbsp;&nbsp; Built a production-ready GenAI platform with React and FastAPI, leveraging Apple's JAX foundation models for App Store search ads alerting, attribution and anomaly detection by orchestrating resources on AWS with OAuth and RBAC
-                <br><br><b>❯❯</b>&nbsp;&nbsp; Developed a chatbot with an elegant modular knowledge recall framework using Retrieval Augmented Generation (RAG)
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Built a production-ready Generative AI platform complete with OAuth and RBAC, leveraging FastAPI and Apple's JAX models for App Store search ads alerting, anomaly detection and attribution by orchestrating various AWS resources
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Developed an agentic chatbot incorporating RAG, batching, chunking and an elegant modular knowledge recall framework
                 <br><br><b>❯❯</b>&nbsp;&nbsp; Set up pipelines for Docker, knowledge generation and CI/CD using Jenkins and Spinnaker for deployments to EKS
 
 - title: Graduate Student
@@ -25,8 +25,8 @@
   from: 2023 February
   to: 2023 July
   description:  <b><i>SpotIQ</i> | <i>Backend + Frontend + ML Engineer</i></b>
-                <br><br><b>❯❯</b>&nbsp;&nbsp; SpotIQ is ThoughtSpot's AI engine, where I built and scaled ML based insight generation, progressing from junior IC to leading technical decision making, driving efforts to re-architect the product with 300+ PRs by the end of my tenure
-                <br><br><b>❯❯</b>&nbsp;&nbsp; Working with React, GraphQL, Java, C++, Python, Go, EC2, RDS and Postgres, I expanded Cortex, our in-house Machine Learning engine, to support multi-tenancy, designed the data caching layer, data transport and all major APIs
+                <br><br><b>❯❯</b>&nbsp;&nbsp; SpotIQ is ThoughtSpot's AI engine, where I built and scaled ML based insight generation, progressing from junior to senior IC with over 300+ PRs in under 2 years, driving efforts to re-architect the core product
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Working cross-functionally with React, GraphQL, Java, C++, Python, Go, EC2, RDS and Postgres, I expanded Cortex, our in-house Machine Learning engine, to support multi-tenancy, designed the data caching layer and all major APIs
                 <br><br><b>❯❯</b>&nbsp;&nbsp; Built key driver analysis for changes in user metrics, and drastically reduced tech debt, improving team-wide productivity
 
 - title: Member of Technical Staff 3
