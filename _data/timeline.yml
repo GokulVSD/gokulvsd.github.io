@@ -1,3 +1,13 @@
+- title: Software Engineer ICT3
+  organisation: Apple Inc.
+  website: https://www.apple.com/
+  location: Austin, TX
+  from: 2025 July
+  to: Present
+  description:  <b><i>Search Ads</i> | <i>Engineering</i></b>
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Working on Generative and Agentic AI to power dynamic analytics, alerting and auto triaging within Apple Ads
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Responsibilities include fine-tuning Apple's JAX foundation models along with incorporating MCP, RAG, batching, chunking, guided generation, knowledge recall and stateful memory context
+
 - title: Software Engineer Intern
   organisation: Apple Inc.
   website: https://www.apple.com/
@@ -5,8 +15,7 @@
   from: 2024 May
   to: 2024 August
   description:  <b><i>Search Ads</i> | <i>Engineering</i></b>
-                <br><br><b>❯❯</b>&nbsp;&nbsp; Built a production-ready Generative AI platform complete with OAuth and RBAC, leveraging FastAPI and Apple's JAX models for App Store search ads alerting, anomaly detection and attribution by orchestrating various AWS resources
-                <br><br><b>❯❯</b>&nbsp;&nbsp; Developed an agentic chatbot incorporating RAG, batching, chunking and an elegant modular knowledge recall framework
+                <br><br><b>❯❯</b>&nbsp;&nbsp; Built a prod-ready Gen AI platform with FastAPI including OAuth and RBAC for ads anomaly detection and attribution
                 <br><br><b>❯❯</b>&nbsp;&nbsp; Set up pipelines for Docker, knowledge generation and CI/CD using Jenkins and Spinnaker for deployments to EKS
 
 - title: Graduate Student
